@@ -1,0 +1,131 @@
+[
+    {
+        "id": "bahmni.clinical",
+        "extensionPoints": [
+            {
+                "id": "org.bahmni.clinical.consultation.board",
+                "description": "Bahmni Clinical Consultation Page"
+            },
+            {
+                "id": "org.bahmni.clinical.conceptSetGroup.*",
+                "description": "Define conceptsets part of a conceptset group"
+            },
+            {
+                "id": "org.bahmni.clinical.orders",
+                "description": "Bahmni Orders Page"
+            },
+            {
+                "id":"org.bahmni.patient.search",
+                "description": "Bahmni Patient search, lookups Page"
+            }
+        ],
+        "contextModel": [
+            "patientUuid",
+            "visitUuid"
+        ],
+        "config" : {
+            "obsIgnoreList" : ["Patient file"],
+            "otherInvestigationsMap": {
+            },
+            "maxConceptSetLevels": 3,
+            "conceptSetUI": {
+                "Chief complaint" : {
+                    "durationRequired" : false,
+					"conciseText" : true
+                },
+				"Followed previously at": {
+					"conciseText" : true
+				},
+				"Diagnosis location":{
+					"conciseText" : true
+				},
+				"Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Details" : {
+                                        "conciseText" : true
+                                },
+                                "Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Reason" : {
+                                        "conciseText" : true
+                                },
+				"Congestive Heart Failure - Examination / Follow Up - Onset - Chief Complaint Data - Chief Complaint" : {
+                                        "conciseText" : true
+                                },
+				"Details":{
+					"conciseText" : true
+				},
+				"Reason":{
+					"conciseText" : true
+				},
+				"Quit since":{
+					"conciseText" : true
+				},
+				"CAD - Symptoms of Angina today": {
+					"multiSelect" : true
+                                },                                                
+				"Congestive Heart Failure - Intake - Major comorbidities" : {
+                                        "multiSelect" : true
+                                },
+				"Congestive Heart Failure - Examination / Follow Up - Reason for Decompensation / Etiology - Reason for decompensation / Likely Etiology": {
+                                        "multiSelect" : true
+                                },
+				"Meets all 5 criteria": {
+					"multiSelect" : true
+				},
+				"Meets all 3 criteria": {
+                                        "multiSelect" : true
+                                },
+				"Congestive Heart Failure - Examination / Follow Up - Assessment / Follow up - Assessment": {
+					"multiSelect" : true
+				},
+				"CAD - Diagnosis": {
+				       "multiSelect" : true
+				},
+				"CAD - Risk factors": {
+				       "multiSelect" : true
+				},
+				"CAD - Soft risk factors": {
+					"multiSelect" : true
+				},
+				"Exercise": {
+					"multiSelect" : true
+				},
+				"CAD - Assessment": {
+					"multiSelect" : true
+				},
+				"Diagnostic clues - COPD" : {
+					"multiSelect" : true
+				},
+				"Considered top differential diagnosis" : {
+					"multiSelect" : true
+				},
+				"Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Symptoms of Heart Failure" : {
+					"multiSelect" : true
+				},
+				"Hypertension - Risk factors" : {
+					"multiSelect" : true
+				},
+       				"Operative Procedure" : {
+                  			"answersConceptName" : "Procedure Answers",
+                  			"freeTextAutocomplete" : true
+                		}
+			},
+            "patientDashboardSections": [
+                {
+                    "title": "Diagnosis",
+                    "name": "diagnosis"
+                },
+                {
+                    "title": "Treatments",
+                    "name": "treatment",
+                    "numberOfVisits": 1
+                },
+                {
+                    "title": "Radiology",
+                    "name": "radiology"
+                },
+                {
+                    "title": "Lab Orders",
+                    "name": "labOrders"
+                }
+            ]
+        }
+    }
+]
