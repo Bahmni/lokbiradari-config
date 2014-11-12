@@ -1,0 +1,4 @@
+if ("HEM".equals(healthCenter)) {
+    return true;
+}
+return false;
