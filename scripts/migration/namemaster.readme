@@ -1,0 +1,19 @@
+Step 1:
+Run the sql query and export the result as "namemaster.csv"
+
+Step 2:
+Open the "namemaster.csv" file in LibreOffice. Copy the "First Name" column and paste it in "namemaster-temp.csv" (create new file and save it with comma as delimiter)
+
+Step 3:
+Covert the "First Name" column in "namemaster-temp.csv" into multiple columns using space as delimiter (Data-->Text to Columns)
+
+Step 4:
+Run the shell script "convert.sh" in the same directory
+
+Step 5: 
+Open "namemaster-temp-final.csv" in LibreOffice and copy the three columns and paste them in "namemaster.csv" (right next to "First Name" column)
+
+Step 6:
+Remove "First Name" column from "namemaster.csv" and rename the heading of next 3 columns as "First Name", "Middle Name" and "Last Name"
+
+You are done!

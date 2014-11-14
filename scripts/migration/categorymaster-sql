@@ -1,0 +1,7 @@
+select '' as "uuid",
+	"CATEGORY" as "name",
+	'' as "shortname",
+	'' as "description",
+	'ConvSet' as "class",
+	'' as "child.1"
+	from categorymaster order by "CATEGORY";

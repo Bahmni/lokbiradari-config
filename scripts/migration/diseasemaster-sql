@@ -1,0 +1,9 @@
+select '' as "uuid",
+	"DISEASENAME" as "name",
+	'' as "description",
+	'Diagnosis' as "class",
+	'N/A' as "datatype",
+	'' as "shortname",
+	'' as "synonym.1",
+	'' as "answer.1"
+	from diseasemaster;

@@ -1,0 +1,10 @@
+select "REGNNO" as "Registration Number",
+	"createddate"::timestamp::date as "Registration Date",
+	"PTNAME" as "First Name",
+	"SEX" as "Gender",
+	"DOB"::timestamp::date as "Birth Date",
+	"VILLAGENAME" as "Address.Village",
+	"TALUKANAME" as "Address.Tehsil",
+	"DISTRICTNAME" as "Address.District",
+	"state" as "Address.State"
+	from namemaster;
