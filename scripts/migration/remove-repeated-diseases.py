@@ -28,7 +28,6 @@ try:
                 if temp >= len(entries):
                     break
             i = temp
-            print entries[temp]
     csvwriter.writerows(entries)
 finally:
     f.close()

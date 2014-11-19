@@ -2,10 +2,10 @@
 import os
 import sys
 import csv
-if len(sys.argv)<=1:
-    print "Usage: ./split-csv.py <space> <filename_to_split>"
+if len(sys.argv)<=2:
+    print "Usage: ./split-csv.py <space> <filename_to_split> <numberOfRecords>"
     exit(0)
-divisor = 10000
+divisor = int(sys.argv[2]) #10000
 outfileno = 1
 outfile = None
 basefile=os.path.splitext(sys.argv[1])[0]

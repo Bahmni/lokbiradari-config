@@ -1,3 +1,7 @@
+===========
+IPD
+===========
+
 SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
         'IPD' as "visitType",
@@ -37,6 +41,10 @@ SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         ("OperationDate" is null and "OpName" is null and "OpDetails" is null)
         order by "Registration Number","Repeat.1.EncounterDate";
 
+
+===========
+OPD
+===========
 
 SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
