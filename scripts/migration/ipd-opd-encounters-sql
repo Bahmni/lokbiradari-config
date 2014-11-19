@@ -1,44 +1,44 @@
-SELECT "PTSRNO" as "Registration Number",
+SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
         'IPD' as "visitType",
         "PTNAME" as "Patient.Name",
         "AGEyears" as "Patient.AGE",
         "SEX" as "Patient.Gender",
         "VILLAGENAME" as "Patient.Village",
-        "IPDATE"::timestamp::date as "Visit Start Date",
-        "DISCHARGEDATE"::timestamp::date as "Visit End Date",
         "ACTIONDATE"::timestamp::date as "Repeat.1.EncounterDate",
         "DISEASENAME1" as "Repeat.1.Diagnosis.diagnosis1",
         "DISEASENAME2" as "Repeat.1.Diagnosis.diagnosis2",
         "DISEASENAME3" as "Repeat.1.Diagnosis.diagnosis3",
+        "IPDATE"::timestamp::date as "Visit Start Date",
+        "DISCHARGEDATE"::timestamp::date as "Visit End Date",
         "PTACTION" as "Repeat.1.Observation.Migrated Drug Orders",
         concat("OperationDate"::timestamp::date,' - ',"OpName",' - ',"OpDetails") as "Repeat.1.OperationDetails",
         "ExpiryDate" as "Repeat.1.ExpiredDate"
         FROM ptmaster where ("IPDATE" is not NULL or "DISCHARGEDATE" is not NULL) and
         ("OperationDate" is not null or "OpName" is not null or "OpDetails" is not null)
 union all
-SELECT "PTSRNO" as "Registration Number",
+SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
         'IPD' as "visitType",
         "PTNAME" as "Patient.Name",
         "AGEyears" as "Patient.AGE",
         "SEX" as "Patient.Gender",
         "VILLAGENAME" as "Patient.Village",
-        "IPDATE"::timestamp::date as "Visit Start Date",
-        "DISCHARGEDATE"::timestamp::date as "Visit End Date",
         "ACTIONDATE"::timestamp::date as "Repeat.1.EncounterDate",
         "DISEASENAME1" as "Repeat.1.Diagnosis.diagnosis1",
         "DISEASENAME2" as "Repeat.1.Diagnosis.diagnosis2",
         "DISEASENAME3" as "Repeat.1.Diagnosis.diagnosis3",
+        "IPDATE"::timestamp::date as "Visit Start Date",
+        "DISCHARGEDATE"::timestamp::date as "Visit End Date",
         "PTACTION" as "Repeat.1.Observation.Migrated Drug Orders",
         '' as "Repeat.1.OperationDetails",
         "ExpiryDate" as "Repeat.1.ExpiredDate"
         FROM ptmaster where ("IPDATE" is not NULL or "DISCHARGEDATE" is not NULL) and
         ("OperationDate" is null and "OpName" is null and "OpDetails" is null)
-        order by "Repeat.1.EncounterDate";
+        order by "Registration Number","Repeat.1.EncounterDate";
 
 
-SELECT "PTSRNO" as "Registration Number",
+SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
         'OPD' as "visitType",
         "PTNAME" as "Patient.Name",
@@ -55,7 +55,7 @@ SELECT "PTSRNO" as "Registration Number",
         FROM ptmaster where ("IPDATE" is NULL and "DISCHARGEDATE" is NULL) and
         ("OperationDate" is not null or "OpName" is not null or "OpDetails" is not null)
 union all
-SELECT "PTSRNO" as "Registration Number",
+SELECT concat('hem',"PTSRNO"::int) as "Registration Number",
         'Consultation' as "encounterType",
         'OPD' as "visitType",
         "PTNAME" as "Patient.Name",
@@ -71,4 +71,4 @@ SELECT "PTSRNO" as "Registration Number",
         "ExpiryDate" as "Repeat.1.ExpiredDate"
         FROM ptmaster where ("IPDATE" is NULL and "DISCHARGEDATE" is NULL) and
         ("OperationDate" is null and "OpName" is null and "OpDetails" is null)
-        order by "Repeat.1.EncounterDate";
+        order by "Registration Number","Repeat.1.EncounterDate";

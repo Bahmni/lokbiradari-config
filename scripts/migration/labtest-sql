@@ -1,3 +1,5 @@
+#remove first 8 results from the below query result and add respective datatypes manually
+
 select '' as "uuid", 
 	"column_name" as "name", 
 	'' as "description", 

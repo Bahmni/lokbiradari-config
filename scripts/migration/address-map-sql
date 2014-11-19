@@ -7,17 +7,3 @@ select distinct on ("VILLAGENAME","TALUKANAME","DISTRICTNAME","state")
 	("DISTRICTNAME" is not NULL and "DISTRICTNAME" != ' ') or 
 	("state" is not NULL and "state" != ' ')
 	order by "VILLAGENAME";
-
-select distinct on ("VILLAGENAME","TALUKANAME","DISTRICTNAME","state") 
-	"VILLAGENAME" as "Address.Village",
-	"TALUKANAME" as "Address.Tehsil",
-	"DISTRICTNAME" as "Address.District",
-	"state" as "Address.State"
-	from namemaster where ("TALUKANAME" is NULL or "TALUKANAME" = ' ') and 
-	("DISTRICTNAME" is NULL or "DISTRICTNAME" = ' ') and 
-	("state" is NULL or "state" = ' ')
-	and "VILLAGENAME" not in 
-	(select "VILLAGENAME" from namemaster where ("TALUKANAME" is not NULL and "TALUKANAME" != ' ') or 
-		("DISTRICTNAME" is not NULL and "DISTRICTNAME" != ' ') or 
-		("state" is not NULL and "state" != ' '))
-	order by "VILLAGENAME" ;

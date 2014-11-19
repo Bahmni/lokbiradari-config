@@ -1,4 +1,4 @@
-select "REGNNO" as "Registration Number",
+select concat('hem',"REGNNO"::int) as "Registration Number",
 	"createddate"::timestamp::date as "Registration Date",
 	"PTNAME" as "First Name",
 	"SEX" as "Gender",
@@ -7,4 +7,4 @@ select "REGNNO" as "Registration Number",
 	"TALUKANAME" as "Address.Tehsil",
 	"DISTRICTNAME" as "Address.District",
 	"state" as "Address.State"
-	from namemaster;
+	from namemaster order by "Registration Number";

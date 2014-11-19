@@ -1,203 +1,110 @@
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'HB' as "Test Name",
-        "HB"::varchar(10) as "Result"
-        from investigationmaster where "HB" is not null and "HB" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'WBC' as "Test Name",
-        "WBC"::varchar(10) as "Result"
-        from investigationmaster where "WBC" is not null and "WBC" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'PLT' as "Test Name",
-        "PLT"::varchar(10) as "Result"
-        from investigationmaster where "PLT" is not null and "PLT" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'LYMPH' as "Test Name",
-        "LYMPH"::varchar(10) as "Result"
-        from investigationmaster where "LYMPH" is not null and "LYMPH" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'MIDM' as "Test Name",
-        "MIDM"::varchar(10) as "Result"
-        from investigationmaster where "MIDM" is not null and "MIDM" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'GRAN' as "Test Name",
-        "GRAN"::varchar(10) as "Result"
-        from investigationmaster where "GRAN" is not null and "GRAN" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'BLDSUGAR' as "Test Name",
-        "BLDSUGAR"::varchar(10) as "Result"
-        from investigationmaster where "BLDSUGAR" is not null and "BLDSUGAR" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SERUMALBUMIN' as "Test Name",
-        "SERUMALBUMIN"::varchar(10) as "Result"
-        from investigationmaster where "SERUMALBUMIN" is not null and "SERUMALBUMIN" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'ALKALINEPHOSPHATE' as "Test Name",
-        "ALKALINEPHOSPHATE"::varchar(10) as "Result"
-        from investigationmaster where "ALKALINEPHOSPHATE" is not null and "ALKALINEPHOSPHATE" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'UREA' as "Test Name",
-        "UREA"::varchar(10) as "Result"
-        from investigationmaster where "UREA" is not null and "UREA" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'CHOLESTEROL' as "Test Name",
-        "CHOLESTEROL"::varchar(10) as "Result"
-        from investigationmaster where "CHOLESTEROL" is not null and "CHOLESTEROL" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'TRIGLYCERIDES' as "Test Name",
-        "TRIGLYCERIDES"::varchar(10) as "Result"
-        from investigationmaster where "TRIGLYCERIDES" is not null and "TRIGLYCERIDES" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'CREATININE' as "Test Name",
-        "CREATININE"::varchar(10) as "Result"
-        from investigationmaster where "CREATININE" is not null and "CREATININE" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'HDLCHOLESTEROL' as "Test Name",
-        "HDLCHOLESTEROL"::varchar(10) as "Result"
-        from investigationmaster where "HDLCHOLESTEROL" is not null and "HDLCHOLESTEROL" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'POTASSIUM' as "Test Name",
-        "POTASSIUM"::varchar(10) as "Result"
-        from investigationmaster where "POTASSIUM" is not null and "POTASSIUM" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SODIUM' as "Test Name",
-        "SODIUM"::varchar(10) as "Result"
-        from investigationmaster where "SODIUM" is not null and "SODIUM" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'BILIRUBIN' as "Test Name",
-        "BILIRUBIN"::varchar(10) as "Result"
-        from investigationmaster where "BILIRUBIN" is not null and "BILIRUBIN" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'URICACID' as "Test Name",
-        "URICACID"::varchar(10) as "Result"
-        from investigationmaster where "URICACID" is not null and "URICACID" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SGPT' as "Test Name",
-        "SGPT"::varchar(10) as "Result"
-        from investigationmaster where "SGPT" is not null and "SGPT" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SGOT' as "Test Name",
-        "SGOT"::varchar(10) as "Result"
-        from investigationmaster where "SGOT" is not null and "SGOT" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'TOTALPROTEIN' as "Test Name",
-        "TOTALPROTEIN"::varchar(10) as "Result"
-        from investigationmaster where "TOTALPROTEIN" is not null and "TOTALPROTEIN" != 0
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'HBSAG' as "Test Name",
-        "HBSAG" as "Result"
-        from investigationmaster where trim("HBSAG") != '' and "HBSAG" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'VDRL' as "Test Name",
-        "VDRL" as "Result"
-        from investigationmaster where trim("VDRL") != '' and "HBSAG" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'HIV' as "Test Name",
-        "HIV" as "Result"
-        from investigationmaster where trim("HIV") != '' and "HIV" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'BLDGRP' as "Test Name",
-        "BLDGRP" as "Result"
-        from investigationmaster where trim("BLDGRP") != '' and "BLDGRP" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'RHFACTOR' as "Test Name",
-        "RHFACTOR" as "Result"
-        from investigationmaster where trim("RHFACTOR") != '' and "RHFACTOR" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SPUTUMFORAFB' as "Test Name",
-        "SPUTUMFORAFB" as "Result"
-        from investigationmaster where trim("SPUTUMFORAFB") != '' and "SPUTUMFORAFB" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'URINESUGAR' as "Test Name",
-        "URINESUGAR" as "Result"
-        from investigationmaster where trim("URINESUGAR") != '' and "URINESUGAR" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'URINEALBUMIN' as "Test Name",
-        "URINEALBUMIN" as "Result"
-        from investigationmaster where trim("URINEALBUMIN") != '' and "URINEALBUMIN" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'URINEPREGNANCY' as "Test Name",
-        "URINEPREGNANCY" as "Result"
-        from investigationmaster where trim("URINEPREGNANCY") != '' and "URINEPREGNANCY" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'PARACHECKMALPF' as "Test Name",
-        "PARACHECKMALPF" as "Result"
-        from investigationmaster where trim("PARACHECKMALPF") != '' and "PARACHECKMALPF" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'PARACHECKMALPV' as "Test Name",
-        "PARACHECKMALPV" as "Result"
-        from investigationmaster where trim("PARACHECKMALPV") != '' and "PARACHECKMALPV" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'SICKLING' as "Test Name",
-        "SICKLING" as "Result"
-        from investigationmaster where trim("SICKLING") != '' and "SICKLING" is not null
-union all
-select "PTREGNO" as "Registration Number",
-        "TDATE"::timestamp::date as "Date",
-        'ESR' as "Test Name",
-        "ESR" as "Result"
-        from investigationmaster where trim("ESR") != '' and "ESR" is not null;
+select concat('hem',"PTREGNO"::int) as "Registration Number",
+	"NAME" as "Patient.Name",
+	"SEX" as "Patient.Gender",
+	"TDATE"::timestamp::date as "Date", 
+	CASE WHEN "HB" is not null and "HB" != 0 THEN 'HB' ELSE NULL END as "Test Name",
+	CASE WHEN "HB" is not null and "HB" != 0 THEN "HB"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "WBC" is not null and "WBC" != 0 THEN 'WBC' ELSE NULL END as "Test Name",
+	CASE WHEN "WBC" is not null and "WBC" != 0 THEN "WBC"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "PLT" is not null and "PLT" != 0 THEN 'PLT' ELSE NULL END as "Test Name",
+	CASE WHEN "PLT" is not null and "PLT" != 0 THEN "PLT"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "LYMPH" is not null and "LYMPH" != 0 THEN 'LYMPH' ELSE NULL END as "Test Name",
+	CASE WHEN "LYMPH" is not null and "LYMPH" != 0 THEN "LYMPH"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "MIDM" is not null and "MIDM" != 0 THEN 'MIDM' ELSE NULL END as "Test Name",
+	CASE WHEN "MIDM" is not null and "MIDM" != 0 THEN "MIDM"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "GRAN" is not null and "GRAN" != 0 THEN 'GRAN' ELSE NULL END as "Test Name",
+	CASE WHEN "GRAN" is not null and "GRAN" != 0 THEN "GRAN"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "BLDSUGAR" is not null and "BLDSUGAR" != 0 THEN 'BLDSUGAR' ELSE NULL END as "Test Name",
+	CASE WHEN "BLDSUGAR" is not null and "BLDSUGAR" != 0 THEN "BLDSUGAR"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "SERUMALBUMIN" is not null and "SERUMALBUMIN" != 0 THEN 'SERUMALBUMIN' ELSE NULL END as "Test Name",
+	CASE WHEN "SERUMALBUMIN" is not null and "SERUMALBUMIN" != 0 THEN "SERUMALBUMIN"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "ALKALINEPHOSPHATE" is not null and "ALKALINEPHOSPHATE" != 0 THEN 'ALKALINEPHOSPHATE' ELSE NULL END as "Test Name",
+	CASE WHEN "ALKALINEPHOSPHATE" is not null and "ALKALINEPHOSPHATE" != 0 THEN "ALKALINEPHOSPHATE"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "UREA" is not null and "UREA" != 0 THEN 'UREA' ELSE NULL END as "Test Name",
+	CASE WHEN "UREA" is not null and "UREA" != 0 THEN "UREA"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "CHOLESTEROL" is not null and "CHOLESTEROL" != 0 THEN 'CHOLESTEROL' ELSE NULL END as "Test Name",
+	CASE WHEN "CHOLESTEROL" is not null and "CHOLESTEROL" != 0 THEN "CHOLESTEROL"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "TRIGLYCERIDES" is not null and "TRIGLYCERIDES" != 0 THEN 'TRIGLYCERIDES' ELSE NULL END as "Test Name",
+	CASE WHEN "TRIGLYCERIDES" is not null and "TRIGLYCERIDES" != 0 THEN "TRIGLYCERIDES"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "CREATININE" is not null and "CREATININE" != 0 THEN 'CREATININE' ELSE NULL END as "Test Name",
+	CASE WHEN "CREATININE" is not null and "CREATININE" != 0 THEN "CREATININE"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "HDLCHOLESTEROL" is not null and "HDLCHOLESTEROL" != 0 THEN 'HDLCHOLESTEROL' ELSE NULL END as "Test Name",
+	CASE WHEN "HDLCHOLESTEROL" is not null and "HDLCHOLESTEROL" != 0 THEN "HDLCHOLESTEROL"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "POTASSIUM" is not null and "POTASSIUM" != 0 THEN 'POTASSIUM' ELSE NULL END as "Test Name",
+	CASE WHEN "POTASSIUM" is not null and "POTASSIUM" != 0 THEN "POTASSIUM"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "SODIUM" is not null and "SODIUM" != 0 THEN 'SODIUM' ELSE NULL END as "Test Name",
+	CASE WHEN "SODIUM" is not null and "SODIUM" != 0 THEN "SODIUM"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "BILIRUBIN" is not null and "BILIRUBIN" != 0 THEN 'BILIRUBIN' ELSE NULL END as "Test Name",
+	CASE WHEN "BILIRUBIN" is not null and "BILIRUBIN" != 0 THEN "BILIRUBIN"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "URICACID" is not null and "URICACID" != 0 THEN 'URICACID' ELSE NULL END as "Test Name",
+	CASE WHEN "URICACID" is not null and "URICACID" != 0 THEN "URICACID"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "SGPT" is not null and "SGPT" != 0 THEN 'SGPT' ELSE NULL END as "Test Name",
+	CASE WHEN "SGPT" is not null and "SGPT" != 0 THEN "SGPT"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "SGOT" is not null and "SGOT" != 0 THEN 'SGOT' ELSE NULL END as "Test Name",
+	CASE WHEN "SGOT" is not null and "SGOT" != 0 THEN "SGOT"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN "TOTALPROTEIN" is not null and "TOTALPROTEIN" != 0 THEN 'TOTALPROTEIN' ELSE NULL END as "Test Name",
+	CASE WHEN "TOTALPROTEIN" is not null and "TOTALPROTEIN" != 0 THEN "TOTALPROTEIN"::varchar(10) ELSE NULL END as "Result",
+	CASE WHEN trim("HBSAG") != '' and "HBSAG" is not null THEN 'HBSAG' ELSE NULL END as "Test Name",
+	CASE WHEN trim("HBSAG") != '' and "HBSAG" is not null THEN "HBSAG" ELSE NULL END as "Result",
+	CASE WHEN trim("VDRL") != '' and "VDRL" is not null THEN 'VDRL' ELSE NULL END as "Test Name",
+	CASE WHEN trim("VDRL") != '' and "VDRL" is not null THEN "VDRL" ELSE NULL END as "Result",
+	CASE WHEN trim("HIV") != '' and "HIV" is not null THEN 'HIV' ELSE NULL END as "Test Name",
+	CASE WHEN trim("HIV") != '' and "HIV" is not null THEN "HIV" ELSE NULL END as "Result",
+	CASE WHEN trim("BLDGRP") != '' and "BLDGRP" is not null THEN 'BLDGRP' ELSE NULL END as "Test Name",
+	CASE WHEN trim("BLDGRP") != '' and "BLDGRP" is not null THEN "BLDGRP" ELSE NULL END as "Result",
+	CASE WHEN trim("RHFACTOR") != '' and "RHFACTOR" is not null THEN 'RHFACTOR' ELSE NULL END as "Test Name",
+	CASE WHEN trim("RHFACTOR") != '' and "RHFACTOR" is not null THEN "RHFACTOR" ELSE NULL END as "Result",
+	CASE WHEN trim("SPUTUMFORAFB") != '' and "SPUTUMFORAFB" is not null THEN 'SPUTUMFORAFB' ELSE NULL END as "Test Name",
+	CASE WHEN trim("SPUTUMFORAFB") != '' and "SPUTUMFORAFB" is not null THEN "SPUTUMFORAFB" ELSE NULL END as "Result",
+	CASE WHEN trim("URINESUGAR") != '' and "URINESUGAR" is not null THEN 'URINESUGAR' ELSE NULL END as "Test Name",
+	CASE WHEN trim("URINESUGAR") != '' and "URINESUGAR" is not null THEN "URINESUGAR" ELSE NULL END as "Result",
+	CASE WHEN trim("URINEALBUMIN") != '' and "URINEALBUMIN" is not null THEN 'URINEALBUMIN' ELSE NULL END as "Test Name",
+	CASE WHEN trim("URINEALBUMIN") != '' and "URINEALBUMIN" is not null THEN "URINEALBUMIN" ELSE NULL END as "Result",
+	CASE WHEN trim("URINEPREGNANCY") != '' and "URINEPREGNANCY" is not null THEN 'URINEPREGNANCY' ELSE NULL END as "Test Name",
+	CASE WHEN trim("URINEPREGNANCY") != '' and "URINEPREGNANCY" is not null THEN "URINEPREGNANCY" ELSE NULL END as "Result",
+	CASE WHEN trim("PARACHECKMALPF") != '' and "PARACHECKMALPF" is not null THEN 'PARACHECKMALPF' ELSE NULL END as "Test Name",
+	CASE WHEN trim("PARACHECKMALPF") != '' and "PARACHECKMALPF" is not null THEN "PARACHECKMALPF" ELSE NULL END as "Result",
+	CASE WHEN trim("PARACHECKMALPV") != '' and "PARACHECKMALPV" is not null THEN 'PARACHECKMALPV' ELSE NULL END as "Test Name",
+	CASE WHEN trim("PARACHECKMALPV") != '' and "PARACHECKMALPV" is not null THEN "PARACHECKMALPV" ELSE NULL END as "Result",
+	CASE WHEN trim("SICKLING") != '' and "SICKLING" is not null THEN 'SICKLING' ELSE NULL END as "Test Name",
+	CASE WHEN trim("SICKLING") != '' and "SICKLING" is not null THEN "SICKLING" ELSE NULL END as "Result",
+	CASE WHEN trim("ESR") != '' and "ESR" is not null THEN 'ESR' ELSE NULL END as "Test Name",
+	CASE WHEN trim("ESR") != '' and "ESR" is not null THEN "ESR" ELSE NULL END as "Result"
+	from investigationmaster
+	where
+	("HB" is not null and "HB" != 0) or
+	("WBC" is not null and "WBC" != 0) or
+	("PLT" is not null and "PLT" != 0) or
+	("LYMPH" is not null and "LYMPH" != 0) or
+	("MIDM" is not null and "MIDM" != 0) or
+	("GRAN" is not null and "GRAN" != 0) or
+	("BLDSUGAR" is not null and "BLDSUGAR" != 0) or
+	("SERUMALBUMIN" is not null and "SERUMALBUMIN" != 0) or
+	("ALKALINEPHOSPHATE" is not null and "ALKALINEPHOSPHATE" != 0) or
+	("UREA" is not null and "UREA" != 0) or
+	("CHOLESTEROL" is not null and "CHOLESTEROL" != 0) or
+	("TRIGLYCERIDES" is not null and "TRIGLYCERIDES" != 0) or
+	("CREATININE" is not null and "CREATININE" != 0) or
+	("HDLCHOLESTEROL" is not null and "HDLCHOLESTEROL" != 0) or
+	("POTASSIUM" is not null and "POTASSIUM" != 0) or
+	("SODIUM" is not null and "SODIUM" != 0) or
+	("BILIRUBIN" is not null and "BILIRUBIN" != 0) or
+	("URICACID" is not null and "URICACID" != 0) or
+	("SGPT" is not null and "SGPT" != 0) or
+	("SGOT" is not null and "SGOT" != 0) or
+	("TOTALPROTEIN" is not null and "TOTALPROTEIN" != 0) or
+	(trim("HBSAG") != '' and "HBSAG" is not null) or
+	(trim("VDRL") != '' and "HBSAG" is not null) or
+	(trim("HIV") != '' and "HIV" is not null) or
+	(trim("BLDGRP") != '' and "BLDGRP" is not null) or
+	(trim("RHFACTOR") != '' and "RHFACTOR" is not null) or
+	(trim("SPUTUMFORAFB") != '' and "SPUTUMFORAFB" is not null) or
+	(trim("URINESUGAR") != '' and "URINESUGAR" is not null) or
+	(trim("URINEALBUMIN") != '' and "URINEALBUMIN" is not null) or
+	(trim("URINEPREGNANCY") != '' and "URINEPREGNANCY" is not null) or
+	(trim("PARACHECKMALPF") != '' and "PARACHECKMALPF" is not null) or
+	(trim("PARACHECKMALPV") != '' and "PARACHECKMALPV" is not null) or
+	(trim("SICKLING") != '' and "SICKLING" is not null) or
+	(trim("ESR") != '' and "ESR" is not null)
+	order by "Registration Number","Date";
+	
