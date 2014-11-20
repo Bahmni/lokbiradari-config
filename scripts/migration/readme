@@ -1,0 +1,104 @@
+This is a Readme file for migration of the hospital database to OpenMRS/Bahmni
+
+Before doing the actual steps, please note that:
+- All the SQL queries need to be run in SQL Power Architect or PgAdmin to ease the CSV generation of the result.
+- Make sure the "limit" of results set to 0 (unlimted)
+- Sequence must be followed as mentioned (even while importing the CSVs into OpenMRS)
+
+=====================================
+1. Address Mapping CSV
+=====================================
+This file will contain the "State-->District-->Tehsil-->Village" columns so that the address will have autocomplete option in OpenMRS/Bahmni
+
+To import the address mapping (State-->District-->Tehsil-->Village), run the sql query in "address-map-sql" file and export the result as "address-map.csv"
+
+
+=====================================
+2. Disease and  its Category CSVs
+=====================================
+Disease CSV file will contain all diseases with class "Diagnosis" and datatype "N/A"
+Category CSV file will contain all the Categories of diseases as sets with the diseases as set members
+
+Do the following steps to generate/import the CSV files
+
+Step 1: Copy the SQL query in "diseasemaster-sql" file and paste and run it in PgSQL client (mentioned above)
+
+Step 2: Export the result as "diseasemaster.csv"
+
+Step 3: Copy the SQL query in "categorymaster-sql" file and paste and run it in PgSQL client (mentioned above)
+
+Step 4: Export the result as "categorymaster.csv"
+
+Step 5: Import "diseasemaster.csv" (as Concept) and then the "categorymaster.csv" (as ConceptSet)
+
+
+=====================================
+3. Namemaster CSV generation
+=====================================
+This CSV file will contain all the patient initial details
+
+Note: Every step below should be respective to the same directory where the sql and scripts placed. The file names are hardcored in scripts. Please use the same names.
+
+Step 1: Copy paste the "namemaster-sql" query in PgAdmin or SQL Power Architect and export the result as "namemaster.csv".
+
+Step 2: Open the "namemaster.csv" file in LibreOffice. Copy the "First Name" column and paste it in a new file spreadsheet file.
+
+Step 3: Covert the "First Name" column in that new spreadsheet file into multiple columns using space as delimiter (Data-->Text to Columns) and save it as "namemaster-temp.csv" with comma as delimiter.
+
+Step 4: Run the shell script "convert.sh"
+
+Step 5: Open "namemaster-temp-final.csv" in LibreOffice and copy the three columns and paste them in "namemaster.csv" (the one we exported originally) in place of "First Name" column.
+
+Step 6: Rename the heading of these 3 columns as "First Name", "Middle Name" and "Last Name".
+
+You are ready with "namemaster.csv" to import the patients to OpenMRS
+
+
+=====================================
+4. IPD and OPD Encounters CSVs
+=====================================
+IPD CSV will have all the encounters whose "IPDATE" or "DISCHARGEDATE" is non empty
+OPD CSV will have all the encounters entries whose "IPDATE" and "DISCHARGEDATE" are empty
+
+Do the following steps to generate the IPD/OPD encounters (with the mentioned diseases keeping one entry and removing the repeated, per patient)
+
+Step 1: Copy the first SQL query of "ipd-opd-encounters-sql" (under IPD section) and paste/run it in PgSQL client.
+
+Step 2: Export the result as "ipd-encounters_temp.csv"
+
+Step 3: Copy the second SQL query of "ipd-opd-encounters-sql" (under OPD section) and paste/run it in PgSQL client.
+
+Step 4: Export the result as "opd-encounters_temp.csv"
+
+Step 5: Edit the list of diseases which you want to remove the repeated entries, in "remove-repeated-diseases.py" (line number 9, "diseases" list variable).
+
+Step 6: Run the python script "remove-repeated-diseases.py" with "ipd-encounters_temp.csv" and "ipd-encounters.csv" as command line arguments ("./remove-repeated-diseases.py ipd-encounters_temp.csv ipd-encounters.csv")
+
+Step 7: Repeat the step 6 for for OPD encounters also ("./remove-repeated-diseases.py opd-encounters_temp.csv opd-encounters.csv")
+
+Step 8: The OPD encounters will be about 150000, which might be a problem while importing. So lets split this huge file to bunch of small files, by running the "./split-csv.py opd-encounters.csv 10000". This script will create small files with 10000 opd enounters in each file. You can use this to split any csv file with a specified number of lines in each small file.
+
+Step 9: Import "ipd-encounters.csv" and "opd-encounters.csv" into OpenMRS/Bahmni
+
+
+=====================================
+5. Lab Tests refdata and results CSVs
+=====================================
+Labtests Refdata CSV will contain the list of all lab tests as concepts with class "LabTest".
+Labtests Results CSV will contain all the test results for each patient (with columns "Test" and "Result" for each test)
+
+Do the following steps to generate the labtests csv files.
+
+Step 1: Copy the SQL query of "labtest-sql" and paste/run it in PgSQL client.
+
+Step 2: Export the result to "latest-refdata.csv"
+
+Step 3: Remove the first 8 results (excluding the heading row)
+
+Step 4: Add the respective "datatype" and "units" for each entry(test)
+
+Step 5: Copy the SQL query from "labtest-data-sql" and paste/run it in PgSQL client
+
+Step 6: Export the result as "labtest-results.csv"
+
+Step 7: Import "departments.csv" firsta and then the "labtest-refdata.csv" and then the "labtest-results.csv"
