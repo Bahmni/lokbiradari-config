@@ -1,5 +1,3 @@
-#remove first 8 results from the below query result and add respective datatypes manually
-
 select '' as "uuid", 
 	"column_name" as "name", 
 	'' as "description", 
@@ -13,4 +11,4 @@ select '' as "uuid",
 	'' as "reference-term-relationship",
 	'' as "answer.1"
 	from information_schema.columns where
-	table_name='investigationmaster';
+	table_name='investigationmaster' offset 8;

@@ -93,12 +93,10 @@ Step 1: Copy the SQL query of "labtest-sql" and paste/run it in PgSQL client.
 
 Step 2: Export the result to "latest-refdata.csv"
 
-Step 3: Remove the first 8 results (excluding the heading row)
+Step 3: Add the respective "datatype" and "units" for each entry(test)
 
-Step 4: Add the respective "datatype" and "units" for each entry(test)
+Step 4: Copy the SQL query from "labtest-data-sql" and paste/run it in PgSQL client
 
-Step 5: Copy the SQL query from "labtest-data-sql" and paste/run it in PgSQL client
+Step 5: Export the result as "labtest-results.csv"
 
-Step 6: Export the result as "labtest-results.csv"
-
-Step 7: Import "departments.csv" firsta and then the "labtest-refdata.csv" and then the "labtest-results.csv"
+Step 6: Import "departments.csv" firsta and then the "labtest-refdata.csv" and then the "labtest-results.csv"
