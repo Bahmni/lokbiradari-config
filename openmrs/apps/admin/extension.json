@@ -5,7 +5,7 @@
         "type": "link",
         "label": "CSV Upload",
         "url": "#/csv",
-        "icon": "icon-user",
+        "icon": "fa-upload",
         "order": 1,
         "extensionParams": {},
         "requiredPrivilege": "app:registration"
@@ -16,7 +16,7 @@
         "type": "link",
         "label": "CSV Export",
         "url": "#/csvExport",
-        "icon": "icon-user",
+        "icon": "fa-download",
         "order": 1,
         "extensionParams": {},
         "requiredPrivilege": "app:registration"
