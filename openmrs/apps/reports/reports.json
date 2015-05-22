@@ -1,0 +1,58 @@
+[
+    {
+	"name": "OPD/IPD Visit Count",
+	"type": "IpdOpdVisitCount"
+    },
+    {
+	"name": "Haemoglobin Range Based Report",
+	"type": "NumericConceptValuesCount",
+	"config": {
+		"type": "numericConceptValuesReport",
+		"rangeGroupName": "Haemoglobin",
+		"ageGroupName": "Inpatient Discharge Reports",
+		"conceptNames": "'Haemoglobin'"
+	}
+    },
+    {
+	"name": "Malaria Test Count Report",
+	"type": "MalariaTestCount",
+	"config": {
+		"type": "malariaReport",
+		"paraCheck": "Malaria Parasite",
+		"psForMp": "PS for Malaria Parasites"
+	}
+    },
+    {
+	"name": "Malaria Tests Comparison (Rapid Test for Malaria Vs. PS for MP) Report",
+	"type": "MalariaTestComparison",
+	"config": {
+		"type": "malariaReport",
+		"paraCheck": "Malaria Parasite",
+		"psForMp": "PS for Malaria Parasites"
+	}
+    },
+    {
+	"name": "X-Ray Count",
+	"type": "XrayCount"
+    },
+    {
+        "name": "Laboratory Services",
+        "type": "TestCount"
+    },
+    {
+        "name": "Diagnosis wise count",
+        "type": "diagnosisCount",
+        "config": {
+          "visitTypes": "'OPD'",
+          "type": "diagnosisReport"
+        }
+    },
+    {
+	"name": "Operation Notes template report",
+	"type": "obsTemplate",
+	"config": {
+	  "templateName": "Operation Notes Template",
+	  "type": "obsTemplateReport"
+	}
+    }
+]
