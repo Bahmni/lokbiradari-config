@@ -65,7 +65,7 @@
         "type": "link",
         "label": "Reports",
         "url": "../reports/#/dashboard/home",
-        "icon": "icon-user",
+        "icon": "fa-user",
         "order": 8
     }
 
