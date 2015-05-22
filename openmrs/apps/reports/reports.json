@@ -9,7 +9,7 @@
 	"config": {
 		"type": "numericConceptValuesReport",
 		"rangeGroupName": "Haemoglobin",
-		"ageGroupName": "Inpatient Discharge Reports",
+		"ageGroupName": "Haemoglobin",
 		"conceptNames": "'Haemoglobin'"
 	}
     },
