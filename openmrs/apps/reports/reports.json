@@ -23,13 +23,12 @@
 	}
     },
     {
-	"name": "Malaria Tests Comparison (Rapid Test for Malaria Vs. PS for MP) Report",
-	"type": "MalariaTestComparison",
-	"config": {
-		"type": "malariaReport",
-		"paraCheck": "Malaria Parasite",
-		"psForMp": "PS for Malaria Parasites"
-	}
+        "name": "Malaria Comparison",
+        "type": "MRSGeneric",
+        "config": {
+                "type": "sqlReport",
+                "sqlPath": "/var/www/bahmni_config/openmrs/reports/malaria_comparison.sql"
+        }
     },
     {
 	"name": "X-Ray Count",
