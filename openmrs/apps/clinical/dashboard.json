@@ -1,0 +1,48 @@
+[
+  {
+    "dashboardName": "Dashboard",
+    "displayByDefault": true,
+    "maxRecentlyViewedPatients": 10,
+    "sections": [
+      {
+        "title": "Patient Information",
+        "name": "patientInformation",
+        "patientAttributes": [],
+        "addressFields": [
+          "city_village"
+        ]
+      },
+      {
+        "title": "Diagnosis",
+        "name": "diagnosis"
+      },
+      {
+        "title": "Treatments",
+        "name": "treatment",
+        "numberOfVisits": 1
+      },
+      {
+        "title": "Radiology",
+        "name": "radiology"
+      },
+      {
+        "title": "Lab Orders",
+        "name": "labOrders",
+        "dashboardParams": {
+          "showChart": false
+        },
+        "allLabDetails": {
+          "numberOfVisits": 10
+        }
+      },
+      {
+        "title": "Visits",
+        "name": "visits",
+        "dashboardParams": {
+          "title": null,
+          "maximumNoOfVisits": 10
+        }
+      }
+    ]
+  }
+]
