@@ -6,5 +6,11 @@
         xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    
+    <changeSet id="1806201517--" author="Vinay">
+        <comment>Convert the patient identifier to UpperCase</comment>
+        <sql>
+        	UPDATE `patient_identifier` SET `identifier` = concat('HEM', substr(`identifier`, 4))
+			WHERE binary `identifier` like 'hem%';
+        </sql>
+    </changeSet>
 </databaseChangeLog>
