@@ -14,16 +14,15 @@
 	}
     },
     {
-	"name": "Malaria Test Count Report",
-	"type": "MalariaTestCount",
-	"config": {
-		"type": "malariaReport",
-		"paraCheck": "Malaria Parasite",
-		"psForMp": "PS for Malaria Parasites"
-	}
+    	"name": "Malaria Test Count Report",
+    	"type": "ObsValueCount",
+        "config": {
+            "type": "obsValueCountReport",
+            "conceptNames": "'RAPID TEST FOR MALARIA','PS FOR MP'"
+        }
     },
     {
-        "name": "Malaria Comparison",
+        "name": "Malaria Test Comparison Report",
         "type": "MRSGeneric",
         "config": {
                 "type": "sqlReport",
@@ -31,8 +30,12 @@
         }
     },
     {
-	"name": "X-Ray Count",
-	"type": "XrayCount"
+	"name": "X-Ray Count Report",
+    	"type": "ObsCountByConceptClass",
+        "config": {
+            "type": "obsCountByConceptClassReport",
+            "conceptClassNames": "'Radiology'"
+        } 
     },
     {
         "name": "Laboratory Services",
