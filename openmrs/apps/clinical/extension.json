@@ -41,6 +41,16 @@
         "requiredPrivilege": "app:clinical:consultationTab"
     },
     {
+        "id": "bahmni.clinical.consultation.treatment",
+        "extensionPointId": "org.bahmni.clinical.consultation.board",
+        "type": "link",
+        "label": "Treatment",
+        "url": "treatment",
+        "icon": "fa-user-md",
+        "order": 5,
+        "requiredPrivilege": "app:clinical:consultationTab"
+    },    
+    {
         "id": "bahmni.clinical.orders.pending",
         "extensionPointId": "org.bahmni.clinical.orders",
         "type": "link",
