@@ -105,7 +105,10 @@
        				"Operative Procedure" : {
                   			"answersConceptName" : "Procedure Answers",
                   			"freeTextAutocomplete" : true
-                		}
+                		},
+                "Malaria Template": {
+                    "computeDrugs" : true
+                }
 			}
         }
     }
