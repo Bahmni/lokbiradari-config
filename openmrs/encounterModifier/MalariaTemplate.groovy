@@ -1,9 +1,11 @@
-package org.bahmni.module.bahmnicore.encounterModifier
 import org.apache.commons.lang3.time.DateUtils
 import org.bahmni.module.bahmnicore.contract.encounter.data.EncounterModifierData
+import org.bahmni.module.bahmnicore.encounterModifier.EncounterModifier
 import org.bahmni.module.bahmnicore.encounterModifier.exception.CannotModifyEncounterException
 import org.bahmni.module.bahmnicore.service.impl.BahmniBridge
 import org.codehaus.jackson.map.ObjectMapper
+import org.openmrs.Drug
+import org.openmrs.api.context.Context
 import org.openmrs.module.emrapi.encounter.domain.EncounterTransaction
 
 class MalariaTemplate extends EncounterModifier {
@@ -77,15 +79,15 @@ class MalariaTemplate extends EncounterModifier {
 
                 drugOrders.add(drugOrder(PARACETAMOL,1,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.THRICE_A_DAY,9,QUANTITY_UNITS.UNITS,3,DURATION_UNITS.DAYS,null));
                 break;
-            case 32.6..Integer.MAX_VALUE://Integer.MIN_VALUE, { it instanceof Integer && it > 32.6 }
+            default:
                 drugOrders.add(drugOrder(CHLOROQUINE,4,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.TWICE_A_DAY,6,QUANTITY_UNITS.UNITS,1,DURATION_UNITS.DAYS,"First dose 4 Tablets immediately, second dose 2 Tablet after 6 hours"));
 
-                EncounterTransaction.DrugOrder drugOrder = drugOrder(CHLOROQUINE,2,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.ONCE_A_DAY,4,QUANTITY_UNITS.UNITS,2,DURATION_UNITS.DAYS,null);
-                drugOrder.setEffectiveStartDate(DateUtils.addDays(new Date(), 1));
-                drugOrders.add(drugOrder);
+                EncounterTransaction.DrugOrder do2 = drugOrder(CHLOROQUINE,2,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.ONCE_A_DAY,4,QUANTITY_UNITS.UNITS,2,DURATION_UNITS.DAYS,null);
+                do2.setEffectiveStartDate(DateUtils.addDays(new Date(), 1));
+                drugOrders.add(do2);
+                drugOrders.add(drugOrder(PARACETAMOL,1,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.THRICE_A_DAY,9,QUANTITY_UNITS.UNITS,3,DURATION_UNITS.DAYS,"something"));
 
-                drugOrders.add(drugOrder(PARACETAMOL,1,DOSAGE.TABLETS,null,DOSAGE_FREQUENCY.THRICE_A_DAY,9,QUANTITY_UNITS.UNITS,3,DURATION_UNITS.DAYS,null));
-                break;
+                println("Hello World8");
         }
 
         encounterModifierData.setDrugOrders(drugOrders)
@@ -97,8 +99,8 @@ class MalariaTemplate extends EncounterModifier {
         return drugOrder(drugName, null, null, route, null, null, null, null, null, null);
     }
 
-    private static EncounterTransaction.DrugOrder drugOrder(String drugName, Double dose, String doseUnits, 
-                                                            String route, String frequency, Double quantity,String quantityUnit, 
+    private static EncounterTransaction.DrugOrder drugOrder(String drugName, Double dose, String doseUnits,
+                                                            String route, String frequency, Double quantity,String quantityUnit,
                                                             Integer duration, String durationUnits, String additionalInstructions) {
         def drugOrder = createDrugOrder(drugName, form(drugName), doseUnits, route, frequency, quantity, quantityUnit, duration, durationUnits)
         drugOrder.dosingInstructions.dose = dose;
@@ -109,13 +111,18 @@ class MalariaTemplate extends EncounterModifier {
         }
         return drugOrder;
     }
+    static String form(String name) {
+        Drug drug = Context.getConceptService().getDrug(name)
+        if (drug == null) throw new NullPointerException("Drug with name: $name doesn't exist")
+        return drug.getDosageForm().getName().getName()
+    }
 
     private static String convertToJSON(LinkedHashMap<String, Double> doses) {
         objectMapper.writeValueAsString(doses)
     }
 
     private static EncounterTransaction.DrugOrder createDrugOrder(String drugName, String drugForm, String doseUnits, String route, String frequency,
-                                                          Double quantity, String quantityUnit, Integer duration, String durationUnits) {
+                                                                  Double quantity, String quantityUnit, Integer duration, String durationUnits) {
         EncounterTransaction.DrugOrder drugOrder = new EncounterTransaction.DrugOrder();
         EncounterTransaction.Drug drug = new EncounterTransaction.Drug();
         drug.setName(drugName);
@@ -169,5 +176,4 @@ class MalariaTemplate extends EncounterModifier {
         public static String MONTHS="Month(s)";
 
     }
-
 }

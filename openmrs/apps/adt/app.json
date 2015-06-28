@@ -25,10 +25,33 @@
             "visitUuid"
         ],
         "config" : {
-            "onAdmissionForwardTo": "#/patient/search",
-            "onTransferForwardTo": "#/patient/search",
+            "onAdmissionForwardTo": "#/patient/{{patientUuid}}/visit/{{visitUuid}}/encounter/{{encounterUuid}}/bed",
+            "onTransferForwardTo": "#/patient/{{patientUuid}}/visit/{{visitUuid}}/encounter/{{encounterUuid}}/bed",
             "onDischargeForwardTo": "#/patient/search",
-            "defaultVisitType": "General"
+            "defaultVisitType": "OPD",
+	    "dashboard":{
+                "dashboardName": "General",
+                "conceptName":"Adt Notes",
+                "sections": [
+                    {
+                        "title": "Disposition",
+                        "name": "disposition",
+                        "numberOfVisits": 1
+                    },
+                    {
+                        "title": "Admission Details",
+                        "name": "admissionDetails",
+                        "numberOfVisits": 1,
+                        "showDetailsButton": true
+                    },
+                    {
+                    "title": "Patient Information",
+                    "name": "patientInformation",
+                    "patientAttributes": ["caste", "class", "education", "occupation"],
+                    "addressFields": ["address1", "address2", "cityVillage", "countryDistrict"]
+                    }
+                ]
+	}
         }
     }
 ]

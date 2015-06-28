@@ -42,7 +42,31 @@
           "title": null,
           "maximumNoOfVisits": 10
         }
-      }
+      },
+            {
+                "title": "Obs/Gynae Findings",
+                "templateName": "Obstetrics and Gynaecology Templates",
+                "name": "diseaseTemplate",
+                "dashboardParams":
+                {
+                    "showOnly": []
+
+                },
+                "allDiseaseDetails":
+                {
+                    "showDetailsButton":true,
+                    "pivotTable": 
+                    {
+                        "numberOfVisits": "15",
+                        "groupBy": "visits",
+                        "obsConcepts": [],
+                        "drugConcepts": [],
+                        "labConcepts": []
+                    }
+
+                }
+            }
+
     ]
   }
 ]
