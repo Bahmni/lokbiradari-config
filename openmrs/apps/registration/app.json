@@ -18,7 +18,25 @@
             "activeVisitUuid"
         ],
         "config": {
-            "autoCompleteFields": ["familyName", "caste"]
+            "autoCompleteFields": ["familyName", "caste"],
+                    "showMiddleName": "true",
+                    "localNameAttributesToDisplay": ["Mother's Name"],
+                    "localNameSearch": true,
+                    "localNameLabel": "Other Names",
+                    "localNamePlaceholder": "Other names",
+                    "defaultVisitType": "OPD",
+            "patientSearch": {
+                "address": {
+                    "label": "Village",
+                    "placeholder": "Enter village",
+                    "field": "city_village"
+                },
+                "customAttributes": {
+                    "label": "Other Name",
+                    "placeholder": "Other Name",
+                    "fields": ["Mother's Name"]
+                }
+            }
         }
     }
 ]
