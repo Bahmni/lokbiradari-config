@@ -7,25 +7,22 @@
 	"name": "Haemoglobin Range Based Count",
 	"type": "NumericConceptValuesCount",
 	"config": {
-		"type": "numericConceptValuesReport",
 		"rangeGroupName": "Haemoglobin",
 		"ageGroupName": "Haemoglobin",
-		"conceptNames": "'Haemoglobin'"
+		"conceptNames": ["Haemoglobin"]
 	}
     },
     {
     	"name": "Malaria Test Count",
     	"type": "ObsValueCount",
         "config": {
-            "type": "obsValueCountReport",
-            "conceptNames": "'RAPID TEST FOR MALARIA','PS FOR MP'"
+            "conceptNames": ["RAPID TEST FOR MALARIA","PS FOR MP"]
         }
     },
     {
         "name": "USG Count",
         "type": "MRSGeneric",
         "config": {
-                "type": "sqlReport",
                 "sqlPath": "/var/www/bahmni_config/openmrs/reports/usg_report.sql"
         }
     },
@@ -33,8 +30,7 @@
 	"name": "X-Ray Count",
     	"type": "ObsCountByConceptClass",
         "config": {
-            "type": "obsCountByConceptClassReport",
-            "conceptClassNames": "'Radiology'"
+            "conceptClassNames": ["Radiology"]
         } 
     },
     {
@@ -45,33 +41,29 @@
         "name": "Diagnosis wise Count",
         "type": "diagnosisCount",
         "config": {
-          "visitTypes": "'OPD'",
-          "type": "diagnosisReport"
+          "visitTypes": ["OPD"]
         }
     },
     {
         "name": "Delivery Count by Type",
-        "type": "CodedObsCount",
+        "type": "obsCount",
         "config": {
-            "type": "codedObsCountReport",
             "ageGroupName": "All Ages",
-            "conceptNames": "'Delivery, Type'"
+            "conceptNames": ["Delivery, Type"]
         }
     },
     {
         "name": "Operation Count",
-        "type": "CodedObsCount",
+        "type": "obsCount",
         "config": {
-            "type": "codedObsCountReport",
             "ageGroupName": "All Ages",
-            "conceptNames": "'Surgical Procedure'"
+            "conceptNames": ["Surgical Procedure"]
         }
     },
     {
         "name": "Total Delivery Count",
         "type": "MRSGeneric",
         "config": {
-                "type": "sqlReport",
                 "sqlPath": "/var/www/bahmni_config/openmrs/reports/delivery_count_report.sql"
         }
     },
@@ -79,7 +71,6 @@
         "name": "Selected Diagnosis with Patient village",
         "type": "MRSGeneric",
         "config": {
-                "type": "sqlReport",
                 "sqlPath": "/var/www/bahmni_config/openmrs/reports/village_wise_diagnosis_report.sql"
         }
     },
@@ -88,15 +79,13 @@
         "name": "Operation Notes Data",
 	    "type": "obsTemplate",
 	    "config": {
-	    "templateName": "Operation Details",
-	    "type": "obsTemplateReport"
+	    "templateName": "Operation Details"
 	   }
     },
     {
         "name": "Expired Patients Data",
         "type": "obsTemplate",
         "config": {
-            "type": "obsTemplateReport",
             "templateName": "Death Template"
         }   
     },
@@ -104,7 +93,6 @@
         "name": "ANC Sonography Patients Data",
         "type": "obsTemplate",
         "config": {
-            "type": "obsTemplateReport",
             "templateName": "ANC Sonography Details"
         }
     },
@@ -112,7 +100,6 @@
         "name": "Gynaec Sonography Patients Data",
         "type": "obsTemplate",
         "config": {
-            "type": "obsTemplateReport",
             "templateName": "Gynaec Sonography"
         }
     },
@@ -120,7 +107,6 @@
         "name": "Doppler Patients Data",
         "type": "obsTemplate",
         "config": {
-            "type": "obsTemplateReport",
             "templateName": "Doppler Details"
         }
     },
@@ -128,7 +114,6 @@
         "name": "Delivery Notes Data",
         "type": "obsTemplate",
         "config": {
-            "type": "obsTemplateReport",
             "templateName": "Delivery Notes"
         }
     }
