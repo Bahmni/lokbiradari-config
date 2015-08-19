@@ -1,5 +1,5 @@
-[
-    {
+{
+    "opd_summary": {
         "title": "OPD Summary",
         "printing": {
             "title": "Hemalkasa",
@@ -7,7 +7,6 @@
         },
         "defaultSections": true,
         "displayByDefault": true,
-        "sections": [
-        ]
+        "sections": {}
     }
-]
+}

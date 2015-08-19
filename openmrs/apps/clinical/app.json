@@ -1,207 +1,206 @@
-[
-    {
-        "id": "bahmni.clinical",
-        "extensionPoints": [
-            {
-                "id": "org.bahmni.clinical.consultation.board",
-                "description": "Bahmni Clinical Consultation Page"
+{
+    "id": "bahmni.clinical",
+    "extensionPoints": [
+        {
+            "id": "org.bahmni.clinical.consultation.board",
+            "description": "Bahmni Clinical Consultation Page"
+        },
+        {
+            "id": "org.bahmni.clinical.conceptSetGroup.*",
+            "description": "Define conceptsets part of a conceptset group"
+        },
+        {
+            "id": "org.bahmni.clinical.orders",
+            "description": "Bahmni Orders Page"
+        },
+        {
+            "id": "org.bahmni.patient.search",
+            "description": "Bahmni Patient search, lookups Page"
+        }
+    ],
+    "contextModel": [
+        "patientUuid",
+        "visitUuid"
+    ],
+    "config": {
+        "obsIgnoreList": [
+            "Patient file"
+        ],
+        "otherInvestigationsMap": {},
+        "maxConceptSetLevels": 3,
+        "conceptSetUI": {
+            "Chief complaint": {
+                "durationRequired": false,
+                "conciseText": true
             },
-            {
-                "id": "org.bahmni.clinical.conceptSetGroup.*",
-                "description": "Define conceptsets part of a conceptset group"
+            "Followed previously at": {
+                "conciseText": true
             },
-            {
-                "id": "org.bahmni.clinical.orders",
-                "description": "Bahmni Orders Page"
+            "Diagnosis location": {
+                "conciseText": true
             },
-            {
-                "id":"org.bahmni.patient.search",
-                "description": "Bahmni Patient search, lookups Page"
+            "Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Details": {
+                "conciseText": true
+            },
+            "Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Reason": {
+                "conciseText": true
+            },
+            "Congestive Heart Failure - Examination / Follow Up - Onset - Chief Complaint Data - Chief Complaint": {
+                "conciseText": true
+            },
+            "Details": {
+                "conciseText": true
+            },
+            "Reason": {
+                "conciseText": true
+            },
+            "Quit since": {
+                "conciseText": true
+            },
+            "CAD - Symptoms of Angina today": {
+                "multiSelect": true
+            },
+            "Congestive Heart Failure - Intake - Major comorbidities": {
+                "multiSelect": true
+            },
+            "Congestive Heart Failure - Examination / Follow Up - Reason for Decompensation / Etiology - Reason for decompensation / Likely Etiology": {
+                "multiSelect": true
+            },
+            "Meets all 5 criteria": {
+                "multiSelect": true
+            },
+            "Meets all 3 criteria": {
+                "multiSelect": true
+            },
+            "Congestive Heart Failure - Examination / Follow Up - Assessment / Follow up - Assessment": {
+                "multiSelect": true
+            },
+            "CAD - Diagnosis": {
+                "multiSelect": true
+            },
+            "CAD - Risk factors": {
+                "multiSelect": true
+            },
+            "CAD - Soft risk factors": {
+                "multiSelect": true
+            },
+            "Exercise": {
+                "multiSelect": true
+            },
+            "CAD - Assessment": {
+                "multiSelect": true
+            },
+            "Diagnostic clues - COPD": {
+                "multiSelect": true
+            },
+            "Considered top differential diagnosis": {
+                "multiSelect": true
+            },
+            "Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Symptoms of Heart Failure": {
+                "multiSelect": true
+            },
+            "Hypertension - Risk factors": {
+                "multiSelect": true
+            },
+            "Operative Procedure": {
+                "answersConceptName": "Procedure Answers",
+                "freeTextAutocomplete": true
+            },
+            "Surgical Procedure": {
+                "multiSelect": true
             }
-        ],
-        "contextModel": [
-            "patientUuid",
-            "visitUuid"
-        ],
-        "config" : {
-            "obsIgnoreList" : ["Patient file"],
-            "otherInvestigationsMap": {
-            },
-            "maxConceptSetLevels": 3,
-            "conceptSetUI": {
-                "Chief complaint" : {
-                    "durationRequired" : false,
-					"conciseText" : true
+        },
+        "drugOrder": {
+            "defaultDurationUnit": "Day(s)",
+            "defaultInstructions": "As directed",
+            "frequencyDefaultDurationUnitsMap": [
+                {
+                    "minFrequency": "1/7",
+                    "maxFrequency": 5,
+                    "defaultDurationUnit": "Day(s)"
                 },
-				"Followed previously at": {
-					"conciseText" : true
-				},
-				"Diagnosis location":{
-					"conciseText" : true
-				},
-				"Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Details" : {
-                                        "conciseText" : true
-                                },
-                                "Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Current Medicines - Reason" : {
-                                        "conciseText" : true
-                                },
-				"Congestive Heart Failure - Examination / Follow Up - Onset - Chief Complaint Data - Chief Complaint" : {
-                                        "conciseText" : true
-                                },
-				"Details":{
-					"conciseText" : true
-				},
-				"Reason":{
-					"conciseText" : true
-				},
-				"Quit since":{
-					"conciseText" : true
-				},
-				"CAD - Symptoms of Angina today": {
-					"multiSelect" : true
-                                },                                                
-				"Congestive Heart Failure - Intake - Major comorbidities" : {
-                                        "multiSelect" : true
-                                },
-				"Congestive Heart Failure - Examination / Follow Up - Reason for Decompensation / Etiology - Reason for decompensation / Likely Etiology": {
-                                        "multiSelect" : true
-                                },
-				"Meets all 5 criteria": {
-					"multiSelect" : true
-				},
-				"Meets all 3 criteria": {
-                                        "multiSelect" : true
-                                },
-				"Congestive Heart Failure - Examination / Follow Up - Assessment / Follow up - Assessment": {
-					"multiSelect" : true
-				},
-				"CAD - Diagnosis": {
-				       "multiSelect" : true
-				},
-				"CAD - Risk factors": {
-				       "multiSelect" : true
-				},
-				"CAD - Soft risk factors": {
-					"multiSelect" : true
-				},
-				"Exercise": {
-					"multiSelect" : true
-				},
-				"CAD - Assessment": {
-					"multiSelect" : true
-				},
-				"Diagnostic clues - COPD" : {
-					"multiSelect" : true
-				},
-				"Considered top differential diagnosis" : {
-					"multiSelect" : true
-				},
-				"Congestive Heart Failure - Examination / Follow Up - Diagnostic Clues - Symptoms of Heart Failure" : {
-					"multiSelect" : true
-				},
-				"Hypertension - Risk factors" : {
-					"multiSelect" : true
-				},
-       				"Operative Procedure" : {
-                  			"answersConceptName" : "Procedure Answers",
-                  			"freeTextAutocomplete" : true
-                		},
-				"Surgical Procedure" : {
-					"multiSelect" : true
-				}
-				},
-            "drugOrder": {
-                "defaultDurationUnit": "Day(s)",
-                "defaultInstructions": "As directed",
-                "frequencyDefaultDurationUnitsMap": [
-                    {
-                        "minFrequency": "1/7",
-                        "maxFrequency": 5,
-                        "defaultDurationUnit": "Day(s)"
-                    },
-                    {
-                        "minFrequency": "1/30",
-                        "maxFrequency": "1/7",
-                        "defaultDurationUnit": "Week(s)"
-                    },
-                    {
-                        "minFrequency": null,
-                        "maxFrequency": "1/30",
-                        "defaultDurationUnit": "Month(s)"
-                    }
-                ],
-                "drugFormDefaults": {
-                    "Ayurvedic": {
-                        "doseUnits": "Teaspoon",
-                        "route": "Oral"
-                    },
-                    "Capsule": {
-                        "doseUnits": "Capsule(s)",
-                        "route": "Oral"
-                    },
-                    "Cream": {
-                        "route": "Topical"
-                    },
-                    "Drops": {
-                        "doseUnits": "Drop",
-                        "route": "Topical"
-                    },
-                    "Food Supplement": {
-                        "route": "Oral"
-                    },
-                    "Gel": {
-                        "route": "Topical"
-                    },
-                    "Granule": {
-                        "doseUnits": "Unit(s)",
-                        "route": "Oral"
-                    },
-                    "Inhaler": {
-                        "doseUnits": "Puff(s)",
-                        "route": "Inhalation"
-                    },
-                    "Injection": {
-                        "doseUnits": "mg",
-                        "route": "Intravenous"
-                    },
-                    "Jelly": {
-                        "route": "Topical"
-                    },
-                    "Liquid": {
-                        "doseUnits": "ml",
-                        "route": "Oral"
-                    },
-                    "Lotion": {
-                        "route": "Topical"
-                    },
-                    "Ointment": {
-                        "route": "Topical"
-                    },
-                    "Pessary": {
-                        "doseUnits": "Unit(s)",
-                        "route": "Per Vaginal"
-                    },
-                    "Powder": {
-                        "route": "Topical"
-                    },
-                    "Solution": {
-                        "doseUnits": "ml",
-                        "route": "Topical"
-                    },
-                    "Spray": {
-                        "doseUnits": "Puff(s)",
-                        "route": "Nasal"
-                    },
-                    "Syrup": {
-                        "doseUnits": "ml",
-                        "route": "Oral"
-                    },
-                    "Tablet": {
-                        "doseUnits": "Tablet(s)",
-                        "route": "Oral"
-                    }
+                {
+                    "minFrequency": "1/30",
+                    "maxFrequency": "1/7",
+                    "defaultDurationUnit": "Week(s)"
+                },
+                {
+                    "minFrequency": null,
+                    "maxFrequency": "1/30",
+                    "defaultDurationUnit": "Month(s)"
+                }
+            ],
+            "drugFormDefaults": {
+                "Ayurvedic": {
+                    "doseUnits": "Teaspoon",
+                    "route": "Oral"
+                },
+                "Capsule": {
+                    "doseUnits": "Capsule(s)",
+                    "route": "Oral"
+                },
+                "Cream": {
+                    "route": "Topical"
+                },
+                "Drops": {
+                    "doseUnits": "Drop",
+                    "route": "Topical"
+                },
+                "Food Supplement": {
+                    "route": "Oral"
+                },
+                "Gel": {
+                    "route": "Topical"
+                },
+                "Granule": {
+                    "doseUnits": "Unit(s)",
+                    "route": "Oral"
+                },
+                "Inhaler": {
+                    "doseUnits": "Puff(s)",
+                    "route": "Inhalation"
+                },
+                "Injection": {
+                    "doseUnits": "mg",
+                    "route": "Intravenous"
+                },
+                "Jelly": {
+                    "route": "Topical"
+                },
+                "Liquid": {
+                    "doseUnits": "ml",
+                    "route": "Oral"
+                },
+                "Lotion": {
+                    "route": "Topical"
+                },
+                "Ointment": {
+                    "route": "Topical"
+                },
+                "Pessary": {
+                    "doseUnits": "Unit(s)",
+                    "route": "Per Vaginal"
+                },
+                "Powder": {
+                    "route": "Topical"
+                },
+                "Solution": {
+                    "doseUnits": "ml",
+                    "route": "Topical"
+                },
+                "Spray": {
+                    "doseUnits": "Puff(s)",
+                    "route": "Nasal"
+                },
+                "Syrup": {
+                    "doseUnits": "ml",
+                    "route": "Oral"
+                },
+                "Tablet": {
+                    "doseUnits": "Tablet(s)",
+                    "route": "Oral"
                 }
             }
-	}
+        }
     }
-]
+}

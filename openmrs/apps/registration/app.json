@@ -1,42 +1,47 @@
-[
-    {
-        "id": "bahmni.registration",
-        "instanceOf": "bahmni.template.registration",
-        "description": "Bahmni Patient Registration App",
-        "extensionPoints": [
-            {
-                "id": "org.bahmni.registration.patient.search.result.action",
-                "description": "Bahmni Patient Search Result Action"
+{
+    "id": "bahmni.registration",
+    "instanceOf": "bahmni.template.registration",
+    "description": "Bahmni Patient Registration App",
+    "extensionPoints": [
+        {
+            "id": "org.bahmni.registration.patient.search.result.action",
+            "description": "Bahmni Patient Search Result Action"
+        },
+        {
+            "id": "org.bahmni.registration.patient.next",
+            "description": "After Bahmni Patient Registration, forward url configuration"
+        }
+    ],
+    "contextModel": [
+        "patientUuid",
+        "activeVisitUuid"
+    ],
+    "config": {
+        "autoCompleteFields": [
+            "familyName",
+            "caste"
+        ],
+        "showMiddleName": "true",
+        "localNameAttributesToDisplay": [
+            "Mother's Name"
+        ],
+        "localNameSearch": true,
+        "localNameLabel": "Other Names",
+        "localNamePlaceholder": "Other names",
+        "defaultVisitType": "OPD",
+        "patientSearch": {
+            "address": {
+                "label": "Village",
+                "placeholder": "Enter village",
+                "field": "city_village"
             },
-            {
-                "id": "org.bahmni.registration.patient.next",
-                "description": "After Bahmni Patient Registration, forward url configuration"
-            }
-        ],
-        "contextModel": [
-            "patientUuid",
-            "activeVisitUuid"
-        ],
-        "config": {
-            "autoCompleteFields": ["familyName", "caste"],
-                    "showMiddleName": "true",
-                    "localNameAttributesToDisplay": ["Mother's Name"],
-                    "localNameSearch": true,
-                    "localNameLabel": "Other Names",
-                    "localNamePlaceholder": "Other names",
-                    "defaultVisitType": "OPD",
-            "patientSearch": {
-                "address": {
-                    "label": "Village",
-                    "placeholder": "Enter village",
-                    "field": "city_village"
-                },
-                "customAttributes": {
-                    "label": "Other Name",
-                    "placeholder": "Other Name",
-                    "fields": ["Mother's Name"]
-                }
+            "customAttributes": {
+                "label": "Other Name",
+                "placeholder": "Other Name",
+                "fields": [
+                    "Mother's Name"
+                ]
             }
         }
     }
-]
+}

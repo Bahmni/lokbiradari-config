@@ -1,5 +1,5 @@
-[
-    {
+{
+    "csv_upload": {
         "id": "bahmni.admin.csv",
         "extensionPointId": "org.bahmni.admin.dashboard",
         "type": "link",
@@ -10,7 +10,7 @@
         "extensionParams": {},
         "requiredPrivilege": "app:registration"
     },
-    {
+    "csv_export": {
         "id": "bahmni.admin.csvExport",
         "extensionPointId": "org.bahmni.admin.dashboard",
         "type": "link",
@@ -21,4 +21,4 @@
         "extensionParams": {},
         "requiredPrivilege": "app:registration"
     }
-]
+}

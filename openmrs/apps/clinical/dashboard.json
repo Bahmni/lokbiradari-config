@@ -1,72 +1,66 @@
-[
-  {
-    "dashboardName": "Dashboard",
-    "displayByDefault": true,
-    "maxRecentlyViewedPatients": 10,
-    "sections": [
-      {
-        "title": "Patient Information",
-        "name": "patientInformation",
-        "patientAttributes": [],
-        "addressFields": [
-          "city_village"
-        ]
-      },
-      {
-        "title": "Diagnosis",
-        "name": "diagnosis"
-      },
-      {
-        "title": "Treatments",
-        "name": "treatment",
-        "numberOfVisits": 1
-      },
-      {
-        "title": "Radiology",
-        "name": "radiology"
-      },
-      {
-        "title": "Lab Orders",
-        "name": "labOrders",
-        "dashboardParams": {
-          "showChart": false
-        },
-        "allLabDetails": {
-          "numberOfVisits": 10
-        }
-      },
-      {
-        "title": "Visits",
-        "name": "visits",
-        "dashboardParams": {
-          "title": null,
-          "maximumNoOfVisits": 10
-        }
-      },
-            {
+{
+    "dashboard": {
+        "dashboardName": "Dashboard",
+        "displayByDefault": true,
+        "maxRecentlyViewedPatients": 10,
+        "sections": {
+            "patient_information": {
+                "title": "Patient Information",
+                "name": "patientInformation",
+                "patientAttributes": [],
+                "addressFields": [
+                    "city_village"
+                ]
+            },
+            "diagnosis": {
+                "title": "Diagnosis",
+                "name": "diagnosis"
+            },
+            "treatments": {
+                "title": "Treatments",
+                "name": "treatment",
+                "numberOfVisits": 1
+            },
+            "radiology": {
+                "title": "Radiology",
+                "name": "radiology"
+            },
+            "lab_orders": {
+                "title": "Lab Orders",
+                "name": "labOrders",
+                "dashboardParams": {
+                    "showChart": false
+                },
+                "allLabDetails": {
+                    "numberOfVisits": 10
+                }
+            },
+            "visits": {
+                "title": "Visits",
+                "name": "visits",
+                "dashboardParams": {
+                    "title": null,
+                    "maximumNoOfVisits": 10
+                }
+            },
+            "obs/gynae_findings": {
                 "title": "Obs/Gynae Findings",
                 "templateName": "Obstetrics and Gynaecology Templates",
                 "name": "diseaseTemplate",
-                "dashboardParams":
-                {
+                "dashboardParams": {
                     "showOnly": []
-
                 },
-                "allDiseaseDetails":
-                {
-                    "showDetailsButton":true,
-                    "pivotTable": 
-                    {
+                "allDiseaseDetails": {
+                    "showDetailsButton": true,
+                    "pivotTable": {
                         "numberOfVisits": "15",
                         "groupBy": "visits",
                         "obsConcepts": [],
                         "drugConcepts": [],
                         "labConcepts": []
                     }
-
                 }
             }
-
-    ]
-  }
-]
+        }
+    }
+}
