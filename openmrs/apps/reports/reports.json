@@ -1,120 +1,132 @@
-[
-    {
-	"name": "OPD/IPD Visit Count",
-	"type": "IpdOpdVisitCount"
+{
+    "opd_ipd_visit_count": {
+        "name": "OPD/IPD Visit Count",
+        "type": "IpdOpdVisitCount"
     },
-    {
-	"name": "Haemoglobin Range Based Count",
-	"type": "NumericConceptValuesCount",
-	"config": {
-		"rangeGroupName": "Haemoglobin",
-		"ageGroupName": "Haemoglobin",
-		"conceptNames": ["Haemoglobin"]
-	}
-    },
-    {
-    	"name": "Malaria Test Count",
-    	"type": "ObsValueCount",
+    "haemoglobin_range_based_count": {
+        "name": "Haemoglobin Range Based Count",
+        "type": "NumericConceptValuesCount",
         "config": {
-            "conceptNames": ["RAPID TEST FOR MALARIA","PS FOR MP"]
+            "rangeGroupName": "Haemoglobin",
+            "ageGroupName": "Haemoglobin",
+            "conceptNames": [
+                "Haemoglobin"
+            ]
         }
     },
-    {
+    "malaria_test_count": {
+        "name": "Malaria Test Count",
+        "type": "ObsValueCount",
+        "config": {
+            "conceptNames": [
+                "RAPID TEST FOR MALARIA",
+                "PS FOR MP"
+            ]
+        }
+    },
+    "usg_count": {
         "name": "USG Count",
         "type": "MRSGeneric",
         "config": {
-                "sqlPath": "/var/www/bahmni_config/openmrs/reports/usg_report.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/reports/usg_report.sql"
         }
     },
-    {
-	"name": "X-Ray Count",
-    	"type": "ObsCountByConceptClass",
+    "xray_count": {
+        "name": "X-Ray Count",
+        "type": "ObsCountByConceptClass",
         "config": {
-            "conceptClassNames": ["Radiology"]
-        } 
+            "conceptClassNames": [
+                "Radiology"
+            ]
+        }
     },
-    {
+    "laboratory_services_count": {
         "name": "Laboratory Services Count",
         "type": "TestCount"
     },
-    {
+    "diagnosis_wise_count": {
         "name": "Diagnosis wise Count",
         "type": "diagnosisCount",
         "config": {
-          "visitTypes": ["OPD"]
+            "visitTypes": [
+                "OPD"
+            ]
         }
     },
-    {
+    "delivery_count_by_type": {
         "name": "Delivery Count by Type",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
-            "conceptNames": ["Delivery, Type"]
+            "conceptNames": [
+                "Delivery, Type"
+            ]
         }
     },
-    {
+    "operation_count": {
         "name": "Operation Count",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
-            "conceptNames": ["Surgical Procedure"]
+            "conceptNames": [
+                "Surgical Procedure"
+            ]
         }
     },
-    {
+    "total_delivery_count": {
         "name": "Total Delivery Count",
         "type": "MRSGeneric",
         "config": {
-                "sqlPath": "/var/www/bahmni_config/openmrs/reports/delivery_count_report.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/reports/delivery_count_report.sql"
         }
     },
-    {
+    "selected_diagnosis_with_patient_village": {
         "name": "Selected Diagnosis with Patient village",
         "type": "MRSGeneric",
         "config": {
-                "sqlPath": "/var/www/bahmni_config/openmrs/reports/village_wise_diagnosis_report.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/reports/village_wise_diagnosis_report.sql"
         }
     },
-
-    {
+    "operation_notes_data": {
         "name": "Operation Notes Data",
-	    "type": "obsTemplate",
-	    "config": {
-	    "templateName": "Operation Details"
-	   }
+        "type": "obsTemplate",
+        "config": {
+            "templateName": "Operation Details"
+        }
     },
-    {
+    "expired_patients_data": {
         "name": "Expired Patients Data",
         "type": "obsTemplate",
         "config": {
             "templateName": "Death Template"
-        }   
+        }
     },
-    {
+    "anc_sonography_patients_data": {
         "name": "ANC Sonography Patients Data",
         "type": "obsTemplate",
         "config": {
             "templateName": "ANC Sonography Details"
         }
     },
-    {
+    "gynaec_sonography_patients_data": {
         "name": "Gynaec Sonography Patients Data",
         "type": "obsTemplate",
         "config": {
             "templateName": "Gynaec Sonography"
         }
     },
-    {
+    "doppler_patients_data": {
         "name": "Doppler Patients Data",
         "type": "obsTemplate",
         "config": {
             "templateName": "Doppler Details"
         }
     },
-    {
+    "delivery_notes_data": {
         "name": "Delivery Notes Data",
         "type": "obsTemplate",
         "config": {
             "templateName": "Delivery Notes"
         }
     }
-]
+}
