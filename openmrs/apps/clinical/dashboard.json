@@ -10,20 +10,24 @@
                 "patientAttributes": [],
                 "addressFields": [
                     "city_village"
-                ]
+                ],
+                "displayOrder": 0
             },
             "diagnosis": {
                 "title": "Diagnosis",
-                "name": "diagnosis"
+                "name": "diagnosis",
+                "displayOrder": 1
             },
             "treatments": {
                 "title": "Treatments",
                 "name": "treatment",
-                "numberOfVisits": 1
+                "numberOfVisits": 1,
+                "displayOrder": 2
             },
             "radiology": {
                 "title": "Radiology",
-                "name": "radiology"
+                "name": "radiology",
+                "displayOrder": 3
             },
             "lab_orders": {
                 "title": "Lab Orders",
@@ -33,7 +37,8 @@
                 },
                 "allLabDetails": {
                     "numberOfVisits": 10
-                }
+                },
+                "displayOrder": 4
             },
             "visits": {
                 "title": "Visits",
@@ -41,7 +46,8 @@
                 "dashboardParams": {
                     "title": null,
                     "maximumNoOfVisits": 10
-                }
+                },
+                "displayOrder": 5
             },
             "obs/gynae_findings": {
                 "title": "Obs/Gynae Findings",
@@ -59,7 +65,8 @@
                         "drugConcepts": [],
                         "labConcepts": []
                     }
-                }
+                },
+                "displayOrder": 6
             }
         }
     }

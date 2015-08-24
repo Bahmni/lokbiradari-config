@@ -35,13 +35,15 @@
                 "disposition": {
                     "title": "Disposition",
                     "name": "disposition",
-                    "numberOfVisits": 1
+                    "numberOfVisits": 1,
+                    "displayOrder": 0
                 },
                 "admission_details": {
                     "title": "Admission Details",
                     "name": "admissionDetails",
                     "numberOfVisits": 1,
-                    "showDetailsButton": true
+                    "showDetailsButton": true,
+                    "displayOrder": 1
                 },
                 "patient_information": {
                     "title": "Patient Information",
@@ -57,7 +59,8 @@
                         "address2",
                         "cityVillage",
                         "countryDistrict"
-                    ]
+                    ],
+                    "displayOrder": 2
                 }
             }
         }
