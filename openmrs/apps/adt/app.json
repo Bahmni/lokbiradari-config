@@ -29,24 +29,22 @@
         "onDischargeForwardTo": "#/patient/search",
         "defaultVisitType": "OPD",
         "dashboard": {
-            "dashboardName": "General",
             "conceptName": "Adt Notes",
             "sections": {
                 "disposition": {
-                    "title": "Disposition",
                     "name": "disposition",
                     "numberOfVisits": 1,
-                    "displayOrder": 0
+                    "displayOrder": 0,
+                    "translationKey": "Disposition"
                 },
                 "admission_details": {
-                    "title": "Admission Details",
                     "name": "admissionDetails",
                     "numberOfVisits": 1,
                     "showDetailsButton": true,
-                    "displayOrder": 1
+                    "displayOrder": 1,
+                    "translationKey": "Admission Details"
                 },
                 "patient_information": {
-                    "title": "Patient Information",
                     "name": "patientInformation",
                     "patientAttributes": [
                         "caste",
@@ -60,9 +58,11 @@
                         "cityVillage",
                         "countryDistrict"
                     ],
-                    "displayOrder": 2
+                    "displayOrder": 2,
+                    "translationKey": "Patient Information"
                 }
-            }
+            },
+            "translationKey": "General"
         }
     }
 }
