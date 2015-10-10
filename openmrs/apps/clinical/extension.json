@@ -3,52 +3,52 @@
         "id": "bahmni.clinical.consultation.observations",
         "extensionPointId": "org.bahmni.clinical.consultation.board",
         "type": "link",
+        "label": "Observations",
         "url": "concept-set-group/observations",
         "default": true,
         "icon": "fa-user-md",
         "order": 1,
-        "requiredPrivilege": "app:clinical:observationTab",
-        "translationKey": "Observations"
+        "requiredPrivilege": "app:clinical:observationTab"
     },
     "bahmni_clinical_consultation_diagnosis_app:clinical:diagnosistab": {
         "id": "bahmni.clinical.consultation.diagnosis",
         "extensionPointId": "org.bahmni.clinical.consultation.board",
         "type": "link",
+        "label": "Diagnosis",
         "url": "diagnosis",
         "icon": "fa-user-md",
         "order": 2,
-        "requiredPrivilege": "app:clinical:diagnosisTab",
-        "translationKey": "Diagnosis"
+        "requiredPrivilege": "app:clinical:diagnosisTab"
     },
     "bahmni_clinical_consultation_disposition_app:clinical:dispositiontab": {
         "id": "bahmni.clinical.consultation.disposition",
         "extensionPointId": "org.bahmni.clinical.consultation.board",
         "type": "link",
+        "label": "Disposition",
         "url": "disposition",
         "icon": "fa-user-md",
         "order": 3,
-        "requiredPrivilege": "app:clinical:dispositionTab",
-        "translationKey": "Disposition"
+        "requiredPrivilege": "app:clinical:dispositionTab"
     },
     "bahmni_clinical_consultation_summary_app:clinical:consultationtab": {
         "id": "bahmni.clinical.consultation.summary",
         "extensionPointId": "org.bahmni.clinical.consultation.board",
         "type": "link",
+        "label": "Consultation",
         "url": "consultation",
         "icon": "fa-user-md",
         "order": 5,
-        "requiredPrivilege": "app:clinical:consultationTab",
-        "translationKey": "Consultation"
+        "requiredPrivilege": "app:clinical:consultationTab"
     },
     "bahmni_clinical_consultation_treatment_app:clinical:consultationtab": {
         "id": "bahmni.clinical.consultation.treatment",
         "extensionPointId": "org.bahmni.clinical.consultation.board",
         "type": "link",
+        "label": "Treatment",
         "url": "treatment",
         "icon": "fa-user-md",
         "order": 5,
-        "requiredPrivilege": "app:clinical:consultationTab",
-        "translationKey": "Treatment"
+        "requiredPrivilege": "app:clinical:consultationTab"
     },
     "bahmni_clinical_orders_pending_app:radiologyorders": {
         "id": "bahmni.clinical.orders.pending",
@@ -66,8 +66,8 @@
         "type": "config",
         "extensionParams": {
             "searchHandler": "emrapi.sqlSearch.activePatients",
-            "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard",
-            "translationKey": "Active"
+            "display": "Active",
+            "forwardUrl": "#/patient/{{patientUuid}}/dashboard"
         },
         "label": "Active",
         "order": 1,
@@ -79,7 +79,7 @@
         "type": "config",
         "extensionParams": {
             "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard",
-            "translationKey": "All"
+            "display": "All"
         },
         "label": "All",
         "order": 2,

@@ -1,12 +1,12 @@
 {
     "opd_summary": {
+        "title": "OPD Summary",
         "printing": {
             "title": "Hemalkasa",
             "header": "OPD Summary"
         },
         "defaultSections": true,
         "displayByDefault": true,
-        "sections": {},
-        "translationKey": "OPD Summary"
+        "sections": {}
     }
 }

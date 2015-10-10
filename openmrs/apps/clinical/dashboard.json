@@ -1,34 +1,36 @@
 {
     "dashboard": {
+        "dashboardName": "Dashboard",
         "displayByDefault": true,
         "maxRecentlyViewedPatients": 10,
         "sections": {
             "patient_information": {
+                "title": "Patient Information",
                 "name": "patientInformation",
                 "patientAttributes": [],
                 "addressFields": [
                     "city_village"
                 ],
-                "displayOrder": 0,
-                "translationKey": "Patient Information"
+                "displayOrder": 0
             },
             "diagnosis": {
+                "title": "Diagnosis",
                 "name": "diagnosis",
-                "displayOrder": 1,
-                "translationKey": "Diagnosis"
+                "displayOrder": 1
             },
             "treatments": {
+                "title": "Treatments",
                 "name": "treatment",
                 "numberOfVisits": 1,
-                "displayOrder": 2,
-                "translationKey": "Treatments"
+                "displayOrder": 2
             },
             "radiology": {
+                "title": "Radiology",
                 "name": "radiology",
-                "displayOrder": 3,
-                "translationKey": "Radiology"
+                "displayOrder": 3
             },
             "lab_orders": {
+                "title": "Lab Orders",
                 "name": "labOrders",
                 "dashboardParams": {
                     "showChart": false
@@ -36,19 +38,19 @@
                 "allLabDetails": {
                     "numberOfVisits": 10
                 },
-                "displayOrder": 4,
-                "translationKey": "Lab Orders"
+                "displayOrder": 4
             },
             "visits": {
+                "title": "Visits",
                 "name": "visits",
                 "dashboardParams": {
                     "title": null,
                     "maximumNoOfVisits": 10
                 },
-                "displayOrder": 5,
-                "translationKey": "Visits"
+                "displayOrder": 5
             },
             "obs/gynae_findings": {
+                "title": "Obs/Gynae Findings",
                 "templateName": "Obstetrics and Gynaecology Templates",
                 "name": "diseaseTemplate",
                 "dashboardParams": {
@@ -64,10 +66,8 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 6,
-                "translationKey": "Obs/Gynae Findings"
+                "displayOrder": 6
             }
-        },
-        "translationKey": "Dashboard"
+        }
     }
 }
