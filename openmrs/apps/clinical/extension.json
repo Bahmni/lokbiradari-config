@@ -67,7 +67,7 @@
         "extensionParams": {
             "searchHandler": "emrapi.sqlSearch.activePatients",
             "display": "Active",
-            "forwardUrl": "#/patient/{{patientUuid}}/dashboard"
+            "forwardUrl": "#/patient/{{patientUuid}}/dashboard?encounterUuid=active"
         },
         "label": "Active",
         "order": 1,
@@ -78,7 +78,7 @@
         "extensionPointId": "org.bahmni.patient.search",
         "type": "config",
         "extensionParams": {
-            "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard",
+            "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard?encounterUuid=active",
             "display": "All"
         },
         "label": "All",
