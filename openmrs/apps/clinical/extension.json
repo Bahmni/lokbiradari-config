@@ -46,6 +46,9 @@
         "type": "link",
         "label": "Treatment",
         "url": "treatment",
+        "extensionParams":{
+            "tabConfigName": "allMedicationTabConfig"
+        },
         "icon": "fa-user-md",
         "order": 5,
         "requiredPrivilege": "app:clinical:consultationTab"
