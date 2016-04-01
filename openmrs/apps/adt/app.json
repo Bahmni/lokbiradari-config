@@ -34,20 +34,20 @@
             "sections": {
                 "disposition": {
                     "title": "Disposition",
-                    "name": "disposition",
+                    "type": "disposition",
                     "numberOfVisits": 1,
                     "displayOrder": 0
                 },
                 "admission_details": {
                     "title": "Admission Details",
-                    "name": "admissionDetails",
+                    "type": "admissionDetails",
                     "numberOfVisits": 1,
                     "showDetailsButton": true,
                     "displayOrder": 1
                 },
                 "patient_information": {
                     "title": "Patient Information",
-                    "name": "patientInformation",
+                    "type": "patientInformation",
                     "patientAttributes": [
                         "caste",
                         "class",

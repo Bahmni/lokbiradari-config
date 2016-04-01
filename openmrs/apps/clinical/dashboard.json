@@ -6,7 +6,7 @@
         "sections": {
             "patient_information": {
                 "title": "Patient Information",
-                "name": "patientInformation",
+                "type": "patientInformation",
                 "patientAttributes": [],
                 "addressFields": [
                     "city_village"
@@ -15,35 +15,35 @@
             },
             "diagnosis": {
                 "title": "Diagnosis",
-                "name": "diagnosis",
+                "type": "diagnosis",
                 "displayOrder": 1
             },
             "treatments": {
                 "title": "Treatments",
-                "name": "treatment",
+                "type": "treatment",
                 "numberOfVisits": 1,
                 "displayOrder": 2
             },
             "radiology": {
                 "title": "Radiology",
-                "name": "radiology",
+                "type": "radiology",
                 "displayOrder": 3
             },
             "lab_orders": {
                 "title": "Lab Orders",
-                "name": "labOrders",
-                "dashboardParams": {
+                "type": "labOrders",
+                "dashboardConfig": {
                     "showChart": false
                 },
-                "allLabDetails": {
+                "expandedViewConfig": {
                     "numberOfVisits": 10
                 },
                 "displayOrder": 4
             },
             "visits": {
                 "title": "Visits",
-                "name": "visits",
-                "dashboardParams": {
+                "type": "visits",
+                "dashboardConfig": {
                     "title": null,
                     "maximumNoOfVisits": 10
                 },
@@ -52,11 +52,11 @@
             "obs/gynae_findings": {
                 "title": "Obs/Gynae Findings",
                 "templateName": "Obstetrics and Gynaecology Templates",
-                "name": "diseaseTemplate",
-                "dashboardParams": {
+                "type": "diseaseTemplate",
+                "dashboardConfig": {
                     "showOnly": []
                 },
-                "allDiseaseDetails": {
+                "expandedViewConfig": {
                     "showDetailsButton": true,
                     "pivotTable": {
                         "numberOfVisits": "15",
