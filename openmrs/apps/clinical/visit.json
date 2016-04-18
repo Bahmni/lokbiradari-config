@@ -7,6 +7,36 @@
         },
         "defaultSections": true,
         "displayByDefault": true,
-        "sections": {}
+        "sections": {
+            "Custom Treatment Chart": {
+                "type": "custom",
+                "displayOrder": 1,
+                "config": {
+                    "title": "Custom Treatment Chart",
+                    "template": "<custom-treatment-chart config=config visit-summary=visitSummary></custom-treatment-chart>",
+                    "showOtherActive": true,
+                    "frequenciesToBeHandled": [
+                        "Monday, Wednesday, Friday",
+                        "Tuesday, Thursday, Saturday",
+                        "Monday, Sunday, Wednesday"
+                    ]
+                }
+            },
+            "Treatments": {
+                "type": "treatment",
+                "title": "Treatments",
+                "displayOrder": 6,
+                "config": {
+                    "translationKey": "VISIT_TITLE_TREATMENTS_KEY",
+                    "showFlowSheet": false,
+                    "showListView": true,
+                    "showOtherActive": false,
+                    "showDetailsButton": true,
+                    "showRoute": true,
+                    "showDrugForm": true,
+                    "showProvider" : true
+                }
+            }
+        }
     }
 }
