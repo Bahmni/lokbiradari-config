@@ -128,5 +128,13 @@
         "config": {
             "templateName": "Delivery Notes"
         }
+    },
+    "visitAggregateCount": {
+        "name": "Visit Aggregate Count Report",
+        "type": "VisitAggregateCount",
+        "config": {
+            "type": "VisitAggregateCountReport",
+            "visitTypes": "'IPD','OPD','EMERGENCY'"
+        }
     }
 }
