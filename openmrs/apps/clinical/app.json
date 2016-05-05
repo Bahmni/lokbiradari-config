@@ -107,7 +107,7 @@
                 "autocomplete": true
             },
             "Surgical Procedure": {
-                "multiSelect": true
+                "autocomplete": true
             }
         }
     }
