@@ -130,11 +130,12 @@
         }
     },
     "visitAggregateCount": {
-        "name": "Visit Aggregate Count Report",
+        "name": "Admission and Discharge Report",
         "type": "VisitAggregateCount",
         "config": {
             "type": "VisitAggregateCountReport",
-            "visitTypes": "'IPD','OPD','EMERGENCY'"
+            "visitTypes": "'IPD''"
         }
     }
+
 }

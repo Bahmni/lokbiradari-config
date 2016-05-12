@@ -107,7 +107,10 @@
                 "autocomplete": true
             },
             "Surgical Procedure": {
-                "autocomplete": true
+                "answersConceptName" : "Surgical Procedure",
+                "freeTextAutocomplete" : true,
+                "durationRequired" : false,
+                "allowAddMore" : true
             }
         }
     }
