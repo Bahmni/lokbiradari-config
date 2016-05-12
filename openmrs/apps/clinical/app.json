@@ -106,6 +106,9 @@
                 "answersConceptName": "Procedure Answers",
                 "autocomplete": true
             },
+            "Delivery Note, Liveborn infant details":{
+                "allowAddMore" :true
+            },
             "Surgical Procedure": {
                 "answersConceptName" : "Surgical Procedure",
                 "freeTextAutocomplete" : true,
