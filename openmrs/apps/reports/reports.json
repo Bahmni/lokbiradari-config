@@ -136,6 +136,29 @@
             "type": "VisitAggregateCountReport",
             "visitTypes": "'IPD''"
         }
+    },
+    "diagnosisCountreport": {
+        "name": "Diagnosis Count Report",
+        "type": "diagnosisCount",
+        "config": {
+            "dateRangeRequired": true,
+            "applyDateRangeFor": "diagnosisDate",
+            "visitsToConsider": "all",
+            "ageGroupName": "All Ages",
+            "concept": "Ear diseases Set",
+            "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
+            "columnsGroupBy": ["gender","agegroup_name"]
+        }
+    },
+    "surgicalProcedureReport": {
+        "name": "Surgical Procedure Report",
+        "type": "obsCount",
+        "config": {
+            "ageGroupName": "All Ages",
+            "conceptNames": ["Surgical Procedure"],
+            "countOnlyClosedVisits":"false",
+            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macroTemplates/SurgicalProcedureTemplate.xls"
+        }
     }
 
 }
