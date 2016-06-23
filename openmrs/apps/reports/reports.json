@@ -150,6 +150,36 @@
             "columnsGroupBy": ["gender","agegroup_name"]
         }
     },
+    "nicuAdmissionReport": {
+        "name": "NICU Admission Report",
+        "type": "MRSGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/nicu_admission_report.sql"
+        }
+    },
+    "nicuDischargeReport": {
+        "name": "NICU Discharge Report",
+        "type": "MRSGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/nicu_discharge_report.sql"
+        }
+    },
+    "operation_notes_data": {
+        "name": "Operation Notes Data",
+        "type": "obsTemplate",
+        "config": {
+            "templateName": "Operation Details",
+            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macrotemplates/OperationNotesTemplate.xls"
+        }
+    },
+    "expired_patients_data": {
+        "name": "Expired Patients Data",
+        "type": "obsTemplate",
+        "config": {
+            "templateName": "Death Template",
+            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macrotemplates/DeathTemplate.xls"
+        }
+    },
     "surgicalProcedureReport": {
         "name": "Surgical Procedure Report",
         "type": "obsCount",
@@ -157,7 +187,7 @@
             "ageGroupName": "All Ages",
             "conceptNames": ["Surgical Procedure"],
             "countOnlyClosedVisits":"false",
-            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macroTemplates/SurgicalProcedureTemplate.xls"
+            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macrotemplates/SurgicalProcedureTemplate.xls"
         }
     }
 
