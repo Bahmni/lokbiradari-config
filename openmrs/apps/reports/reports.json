@@ -9,6 +9,7 @@
         "config": {
             "rangeGroupName": "Haemoglobin",
             "ageGroupName": "Haemoglobin",
+            "countOncePerPatient":false,
             "conceptNames": [
                 "Haemoglobin"
             ]
