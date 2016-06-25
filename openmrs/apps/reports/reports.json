@@ -183,12 +183,9 @@
     },
     "surgicalProcedureReport": {
         "name": "Surgical Procedure Report",
-        "type": "obsCount",
+        "type": "MRSGeneric",
         "config": {
-            "ageGroupName": "All Ages",
-            "conceptNames": ["Surgical Procedure"],
-            "countOnlyClosedVisits":"false",
-            "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macrotemplates/SurgicalProcedureTemplate.xls"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/procedure_count.sql"
         }
     }
 
