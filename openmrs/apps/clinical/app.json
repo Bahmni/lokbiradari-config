@@ -109,6 +109,15 @@
             "Delivery Note, Liveborn infant details":{
                 "allowAddMore" :true
             },
+            "Chronic diseases": {
+                "multiSelect": true
+            },
+            "Habits": {
+                "multiSelect": true
+            },
+            "Treatment Done": {
+                "multiSelect": true
+            },
             "Surgical Procedure": {
                 "answersConceptName" : "Surgical Procedure",
                 "freeTextAutocomplete" : true,
