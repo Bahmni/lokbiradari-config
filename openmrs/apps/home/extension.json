@@ -5,7 +5,7 @@
         "type": "link",
         "label": "Registration",
         "url": "../registration/",
-        "icon": "fa-user",
+        "icon": "icon-bahmni-registration",
         "order": 1,
         "requiredPrivilege": "app:registration"
     },
@@ -25,7 +25,7 @@
         "type": "link",
         "label": "InPatient",
         "url": "../adt/",
-        "icon": "fa-file-o",
+        "icon": "icon-bahmni-inpatient",
         "order": 3,
         "requiredPrivilege": "app:adt"
     },
@@ -35,7 +35,7 @@
         "type": "link",
         "label": "Radiology Upload",
         "url": "../document-upload/?encounterType=RADIOLOGY&topLevelConcept=Radiology",
-        "icon": "fa-camera",
+        "icon": "icon-bahmni-radiology",
         "order": 4,
         "requiredPrivilege": "app:document-upload"
     },
@@ -45,7 +45,7 @@
         "type": "link",
         "label": "Patient Documents",
         "url": "../document-upload/?encounterType=Patient Document&topLevelConcept=Patient Document&defaultOption=Patient file",
-        "icon": "fa-camera",
+        "icon": "icon-bahmni-documents",
         "order": 5,
         "requiredPrivilege": "app:document-upload"
     },
@@ -55,7 +55,7 @@
         "type": "link",
         "label": "Admin",
         "url": "../admin/#/dashboard/home",
-        "icon": "fa-user",
+        "icon": "icon-bahmni-admin",
         "order": 7,
         "requiredPrivilege": "app:admin"
     },
@@ -65,7 +65,7 @@
         "type": "link",
         "label": "Reports",
         "url": "../reports/#/dashboard/home",
-        "icon": "fa-user",
+        "icon": "icon-bahmni-reports",
         "order": 8
     }
 }

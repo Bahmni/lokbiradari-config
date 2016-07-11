@@ -1,5 +1,5 @@
 select pi.identifier as 'Identifier',concat(coalesce(pn.given_name,''),' ',coalesce(pn.middle_name,''),' ',coalesce(pn.family_name,''))as Name,
-p.gender as 'Gender',p.birthdate as 'DOB',bd.bed_number as 'Bed Number',va.date_created as 'Admission Date' from visit_attribute va
+p.gender as 'Gender',p.birthdate as 'DOB',bd.bed_number as 'Bed Number',va.date_created as 'Admission Date', va.date_changed as 'Discharge Date' from visit_attribute va
 inner join visit_attribute_type vat on vat.visit_attribute_type_id = va.attribute_type_id
                                        and vat.name='Admission Status'
                                        and cast(va.date_created as DATE) BETWEEN '#startDate#' and '#endDate#'

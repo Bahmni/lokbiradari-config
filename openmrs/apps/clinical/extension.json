@@ -62,7 +62,7 @@
     "url": "orders",
     "icon": "icon-user-md",
     "order": 6,
-    "requiredPrivilege": "app:clinical:diagnosisTab"
+    "requiredPrivilege": "app:clinical:diagnosisTab_removed"
   },
 
     "bahmni_clinical_orders_pending_app:radiologyorders": {

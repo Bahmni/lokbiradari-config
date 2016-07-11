@@ -33,6 +33,7 @@
                 "title": "Lab Orders",
                 "type": "labOrders",
                 "dashboardConfig": {
+                    "title": null,
                     "showChart": false
                 },
                 "expandedViewConfig": {
@@ -49,6 +50,16 @@
                 },
                 "displayOrder": 5
             },
+            "editableForms": {
+                "title": "Editable Forms",
+                "type": "forms",
+                "dashboardConfig": {
+                    "title": null,
+                    "maximumNoOfVisits": 10
+                },
+                "formGroup":["Refer for Surgery Camp","TB Form"],
+                "displayOrder": 7
+            },            
             "obs/gynae_findings": {
                 "title": "Obs/Gynae Findings",
                 "templateName": "Obstetrics and Gynaecology Templates",

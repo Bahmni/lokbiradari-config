@@ -51,6 +51,36 @@
             "Details": {
                 "conciseText": true
             },
+            "Non coded Chief Complaint" : {
+					"conciseText" : true
+			},
+			"Uterine Height" : {
+					"conciseText" : true
+			},
+			"Time of Birth" : {
+				"conciseText" : true
+			},
+			"Apgar Score" : {
+				"conciseText" : true
+			},
+			"E. F. W." : {
+                        	"conciseText" : true
+                		},
+				"HC" : {
+	                        "conciseText" : true
+        		        },
+				"BPD" : {
+	                        "conciseText" : true
+        		        },
+				"FL" : {
+	                        "conciseText" : true
+        		        },
+				"HL" : {
+	                        "conciseText" : true
+        		        },
+				"AC (Sonography)" : {
+	                        "conciseText" : true
+        		        },
             "Reason": {
                 "conciseText": true
             },
@@ -115,7 +145,34 @@
             "Habits": {
                 "multiSelect": true
             },
-            "Treatment Done": {
+            "Obstetrics, EDD": {
+                "allowFutureDates": true
+            },
+            "E. D. D.": {
+                "allowFutureDates": true
+            }, 
+            "Chronic diseases" : {
+                                        "multiSelect" : true
+                                },
+                                "Upper right" : {
+                                        "conciseText" : true
+                                },
+                                "Habits" : { "multiSelect": true},
+                                "Since" :  { "conciseText" : true },
+                                "Treatment Done" : { "multiSelect" : true },
+                                "Upper left":  { "conciseText" : true },
+                                "Lower right":  { "conciseText" : true },
+                                "Lower left":  { "conciseText" : true },
+				"Dental XRay" : { "multiple" : 3 },
+				"Presentation (Obstetric)" : { "multiSelect" : true },
+				"Presentation (Obstetric - Twin)" : { "multiSelect" : true },
+				"Gynaec Sonography Image" : { "multiple" : 2 },
+				"Left Adnexa" : { "multiSelect" : true },
+                                "Right Adnexa" : { "multiSelect" : true },	
+				"Time of Death" : { "conciseText" : true },
+				"Time of Birth" : { "conciseText" : true },
+				"Consultation Images" : { "multiple" : 2  },
+	   "Treatment Done": {
                 "multiSelect": true
             },
             "Surgical Procedure": {
@@ -123,7 +180,25 @@
                 "freeTextAutocomplete" : true,
                 "durationRequired" : false,
                 "allowAddMore" : true
-            }
+            },
+        "Refer for Surgery, Surgical Diagnosis": {
+		"autocomplete": true,
+		"allowAddMore" : true,
+		"required": true
+	    },
+        "Refer for Surgery, Surgery Camp Date": {
+		"allowFutureDates": true
+	    },    	
+		"TB Template, Place of Referral": {
+    		"conciseText": true 
+		},
+		"Follow up form, Diagnosis": {
+			"required": true
+	    },
+	    "Follow Up, Date of follow up": {
+			"allowFutureDates": true,
+			"required": true
+	    }            
         }
     }
 }

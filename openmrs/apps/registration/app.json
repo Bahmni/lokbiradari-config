@@ -36,8 +36,8 @@
                 "field": "city_village"
             },
             "customAttributes": {
-                "label": "Other Name",
-                "placeholder": "Other Name",
+                "label": "Mother's Name",
+                "placeholder": "Mother's Name",
                 "fields": [
                     "Mother's Name"
                 ]

@@ -27,7 +27,7 @@
             "route": "Oral"
           },
           "Capsule": {
-            "doseUnits": "Capsule(s)",
+            "doseUnits": "Capsule",
             "route": "Oral"
           },
           "Cream": {
@@ -35,7 +35,7 @@
           },
           "Drops": {
             "doseUnits": "Drop",
-            "route": "Topical"
+            "route": "Oral"
           },
           "Food Supplement": {
             "route": "Oral"
@@ -51,8 +51,16 @@
             "doseUnits": "Puff(s)",
             "route": "Inhalation"
           },
+          "Inhalation": {
+            "doseUnits": "Unit(s)",
+            "route": "Inhalation"
+          },
           "Injection": {
-            "doseUnits": "mg",
+            "doseUnits": "ml",
+            "route": "Intramuscular"
+          },
+          "Intravenous":{
+          	"doseUnits": "ml",
             "route": "Intravenous"
           },
           "Jelly": {
@@ -80,17 +88,21 @@
             "route": "Topical"
           },
           "Spray": {
-            "doseUnits": "Puff(s)",
+            "doseUnits": "Unit(s)",
             "route": "Nasal"
           },
           "Syrup": {
-            "doseUnits": "ml",
+            "doseUnits": "Teaspoon",
             "route": "Oral"
           },
           "Tablet": {
             "doseUnits": "Tablet(s)",
             "route": "Oral"
-          }
+          },
+          "Tab./Cap.": {
+            "doseUnits": "Tablet",
+            "route": "Oral"
+          }          
         }
       }
     }

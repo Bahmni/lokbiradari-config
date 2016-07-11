@@ -45,8 +45,23 @@
         "name": "Laboratory Services Count",
         "type": "TestCount"
     },
-    "diagnosis_wise_count": {
-        "name": "Diagnosis wise Count",
+  "abnormalityReportForCriticalTests": {
+    "name": "Abnormality report for critical tests",
+    "type": "PatientsWithLabtestResults",
+    "config": {
+      "conceptNames": [
+        "SICKLING TEST",
+        "HBSAG",
+        "HIV",
+        "HIV",
+        "VDRL",
+        "HAEMOGLOBIN"
+      ],
+      "testOutcome": ["abnormal"]
+    }
+  },
+    "diagnosis_wise_OPD_Visit_count": {
+        "name": "Diagnosis wise OPD Visit Count",
         "type": "diagnosisCount",
         "config": {
             "visitTypes": [
@@ -54,52 +69,41 @@
             ]
         }
     },
-    "delivery_count_by_type": {
-        "name": "Delivery Count by Type",
-        "type": "obsCount",
+    "surgicalProcedureCount": {
+        "name": "Surgical Procedure Count",
+        "type": "MRSGeneric",
         "config": {
-            "ageGroupName": "All Ages",
-            "conceptNames": [
-                "Delivery, Type"
-            ]
-        }
-    },
-    "operation_count": {
-        "name": "Operation Count",
-        "type": "obsCount",
-        "config": {
-            "ageGroupName": "All Ages",
-            "conceptNames": [
-                "Surgical Procedure"
-            ]
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/procedure_count.sql"
         }
     },
     "total_delivery_count": {
-        "name": "Total Delivery Count",
+        "name": "Delivery Count",
         "type": "MRSGeneric",
         "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/reports/delivery_count_report.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/delivery_count.sql"
         }
     },
-    "selected_diagnosis_with_patient_village": {
-        "name": "Selected Diagnosis with Patient village",
+    "patientDiagnosisList": {
+        "name": "Patient Diagnoses List",
         "type": "MRSGeneric",
         "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/reports/village_wise_diagnosis_report.sql"
+                "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/patient_diagnosis_list_with_coded_noncoded.sql"
         }
     },
-    "operation_notes_data": {
-        "name": "Operation Notes Data",
-        "type": "obsTemplate",
+    "ipdPatients": {
+        "name": "IPD Admission Discharge Register",
+        "type": "ipdPatients",
         "config": {
-            "templateName": "Operation Details"
+              "addressAttributes": ["city_village"],
+              "patientAttributes": ["caste"],
+              "conceptNames": ["Height", "Weight"]
         }
     },
-    "expired_patients_data": {
-        "name": "Expired Patients Data",
-        "type": "obsTemplate",
+    "nicuAdmissionReport": {
+        "name": "NICU Admission Discharge Register",
+        "type": "MRSGeneric",
         "config": {
-            "templateName": "Death Template"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/nicu_admission_report.sql"
         }
     },
     "anc_sonography_patients_data": {
@@ -130,41 +134,16 @@
             "templateName": "Delivery Notes"
         }
     },
-    "visitAggregateCount": {
-        "name": "Admission and Discharge Report",
-        "type": "VisitAggregateCount",
-        "config": {
-            "type": "VisitAggregateCountReport",
-            "visitTypes": "'IPD''"
-        }
-    },
-    "diagnosisCountreport": {
-        "name": "Diagnosis Count Report",
+    "diagnosisCount_by_age_group_Report": {
+        "name": "Diagnosis Count Report by Age Group and Gender",
         "type": "diagnosisCount",
         "config": {
-            "dateRangeRequired": true,
-            "applyDateRangeFor": "diagnosisDate",
-            "visitsToConsider": "all",
-            "ageGroupName": "All Ages",
-            "concept": "Ear diseases Set",
+            "visitTypes":["IPD","OPD"],
+            "ageGroupName": "Haemoglobin",
             "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
             "columnsGroupBy": ["gender","agegroup_name"]
         }
-    },
-    "nicuAdmissionReport": {
-        "name": "NICU Admission Report",
-        "type": "MRSGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/nicu_admission_report.sql"
-        }
-    },
-    "nicuDischargeReport": {
-        "name": "NICU Discharge Report",
-        "type": "MRSGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/nicu_discharge_report.sql"
-        }
-    },
+    }, 
     "operation_notes_data": {
         "name": "Operation Notes Data",
         "type": "obsTemplate",
@@ -181,12 +160,28 @@
             "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/macrotemplates/DeathTemplate.xls"
         }
     },
-    "surgicalProcedureReport": {
-        "name": "Surgical Procedure Report",
-        "type": "MRSGeneric",
+    "refer_for_surgery_data": {
+        "name": "Surgery Camp Data",
+        "type": "obsTemplate",
         "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/procedure_count.sql"
+            "templateName": "Refer for Surgery Camp",
+             "addressAttributes": ["city_village","address3"]
+        }
+    },
+    "TB_Form_data": {
+        "name": "Tuberculosis Form Report",
+        "type": "obsTemplate",
+        "config": {
+            "templateName": "TB Form",
+             "addressAttributes": ["city_village","address3"]
+        }
+    },
+    "Followup_Visits": {
+        "name": "Report for Follow up Visits ",
+        "type": "obsTemplate",
+        "config": {
+            "templateName": "Follow up Form"
         }
     }
-
 }
+
