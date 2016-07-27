@@ -176,10 +176,8 @@
                 "multiSelect": true
             },
             "Surgical Procedure": {
-                "answersConceptName" : "Surgical Procedure",
-                "freeTextAutocomplete" : true,
-                "durationRequired" : false,
-                "allowAddMore" : true
+                "allowAddMore" : true,
+		"autocomplete" : true
             },
         "Refer for Surgery, Surgical Diagnosis": {
 		"autocomplete": true,
