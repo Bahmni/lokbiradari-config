@@ -175,7 +175,20 @@
        "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/villagewise_patient_count.sql"
        }
     }, 
-
+    "dagnosisCount": {
+    "name": "Category wise Diseases Count",
+    "type": "diagnosisCount",
+    "config": {
+      "concept": "Diagnosis Set of Sets",
+      "rowsGroupBy": [
+        "header_concept_name",
+        "leaf_concept_name"
+      ],
+      "columnsGroupBy": [
+        "gender"
+      ]
+     }
+    },
     "TB_Form_data": {
         "name": "Tuberculosis Form Report",
         "type": "obsTemplate",
