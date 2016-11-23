@@ -10,4 +10,9 @@ inner join bed_patient_assignment_map bedmap on bedmap.patient_id=v.patient_id
   inner join bed bd on bd.bed_id=blm.bed_id
   inner join patient_identifier pi on pi.patient_id=v.patient_id
 inner join person p on p.person_id=pi.patient_id
-INNER JOIN person_name pn on pn.person_id=p.person_id;
+INNER JOIN person_name pn on pn.person_id=p.person_id
+order by va.date_created
+
+
+
+;
