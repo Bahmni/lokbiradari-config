@@ -197,6 +197,13 @@
              "addressAttributes": ["city_village","address3"]
         }
     },
+    "ancmotherdata": {
+       "name": "ANC Mother data",
+       "type": "MRSGeneric",
+       "config": {
+       "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/ancmotherdata.sql"
+       }
+    }, 
     "Followup_Visits": {
         "name": "Report for Follow up Visits ",
         "type": "obsTemplate",
