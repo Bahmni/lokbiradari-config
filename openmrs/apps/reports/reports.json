@@ -92,11 +92,9 @@
     },
     "ipdPatients": {
         "name": "IPD Admission Discharge Register",
-        "type": "ipdPatients",
+        "type": "MRSGeneric",
         "config": {
-              "addressAttributes": ["city_village"],
-              "patientAttributes": ["caste"],
-              "conceptNames": ["Height", "Weight"]
+                "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/customsql/ipd_admission_discharge.sql"
         }
     },
     "nicuAdmissionReport": {
