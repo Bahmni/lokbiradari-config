@@ -31,7 +31,7 @@ SELECT
                FROM obs revised_obs
                JOIN concept_name revised_concept
                  ON revised_obs.concept_id = revised_concept.concept_id
-                    AND DATE(revised_obs.obs_datetime) >= "#startDate#" - INTERVAL 1 DAY
+                    AND DATE(revised_obs.obs_datetime) >= "#startDate#" - INTERVAL 3 DAY
                     AND revised_concept.concept_name_type = "FULLY_SPECIFIED"
                     AND revised_concept.name = "Bahmni Diagnosis Revised"
                     AND revised_obs.voided IS FALSE
