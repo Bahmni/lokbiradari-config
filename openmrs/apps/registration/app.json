@@ -17,14 +17,12 @@
         "activeVisitUuid"
     ],
     "config": {
-        "autoCompleteFields": [
-            "familyName",
-            "caste"
-        ],
+      "mandatoryPersonAttributes": ["Mother's Name"],
+        "autoCompleteFields": ["familyName","caste"],
         "showMiddleName": "true",
-        "localNameAttributesToDisplay": [
-            "Mother's Name"
-        ],
+	"showLastName": "true",
+	"isLastNameMandatory": "true",
+        "localNameAttributesToDisplay": ["Mother's Name"],
         "localNameSearch": true,
         "localNameLabel": "Other Names",
         "localNamePlaceholder": "Other names",
