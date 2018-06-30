@@ -196,6 +196,9 @@
 	    "Follow Up, Date of follow up": {
 			"allowFutureDates": true,
 			"required": true
+	    },
+            "Follicle": {
+		"multiSelect": true
 	    }            
         }
     }

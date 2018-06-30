@@ -75,8 +75,8 @@
         "order": 5,
         "requiredPrivilege": "app:radiologyOrders"
     },
-    "bahmni_clinical_patients_search_allpatients_active_app:clinical": {
-        "id": "bahmni.clinical.patients.search.allPatients",
+    "bahmniClinicalPatientsSearchAllActivePatients": {
+        "id": "bahmni.clinical.patients.search.allActivePatients",
         "extensionPointId": "org.bahmni.patient.search",
         "type": "config",
         "extensionParams": {
@@ -88,7 +88,7 @@
         "order": 1,
         "requiredPrivilege": "app:clinical"
     },
-    "bahmni_clinical_patients_search_allpatients_all_app:clinical": {
+    "bahmniClinicalPatientsSearchAllPatients": {
         "id": "bahmni.clinical.patients.search.allPatients",
         "extensionPointId": "org.bahmni.patient.search",
         "type": "config",
